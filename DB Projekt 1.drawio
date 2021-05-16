@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-16T20:17:40.243Z" agent="5.0 (Windows)" etag="XqmHCb8c1U1aKlxbVCUd" version="14.6.9" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-05-16T20:33:30.411Z" agent="5.0 (Windows)" etag="qbyAos12ih2yPkPPB3Ve" version="14.6.9" type="github" pages="2">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="ER-Model">
     <mxGraphModel dx="865" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -244,9 +244,6 @@
           <mxGeometry x="1" relative="1" as="geometry">
             <mxPoint x="-10" y="30" as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="nEgz5-GOV0EEa66xPJvQ-60" value="ER Diagramm : proposition 1" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=27;" parent="1" vertex="1">
-          <mxGeometry x="80" y="40" width="360" height="40" as="geometry" />
         </mxCell>
         <mxCell id="VcuoFAPImtZ86W6IwMvG-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="nEgz5-GOV0EEa66xPJvQ-62" target="nEgz5-GOV0EEa66xPJvQ-55" edge="1">
           <mxGeometry relative="1" as="geometry">
