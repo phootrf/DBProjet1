@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.8.31)  16 MAY 2021 22:32
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6400 64-bit) (preloaded format=xelatex 2017.8.31)  16 MAY 2021 23:02
 entering extended mode
 **./Description.tex
 (Description.tex
@@ -33,10 +33,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: xetex.def on input line 99.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\xetex.def"
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
@@ -67,7 +67,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen112
 \Gm@dimlist=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\xelatex\xetexconfig\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2017/06/29 3.12 The Babel package
  ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
@@ -79,11 +79,8 @@ File: switch.def 2017/06/29 3.12 Babel switching mechanism
 ("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\german.ldf"
-Language: german 2016/11/02 v2.9 German support for babel (traditional orthography)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\germanb.ldf"
-Language: germanb 2016/11/02 v2.9 German support for babel (traditional orthography)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2017/06/29 3.12 Babel common definitions
@@ -92,9 +89,14 @@ File: switch.def 2017/06/29 3.12 Babel switching mechanism
 )
 \babel@savecnt=\count90
 \U@D=\dimen113
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\xebabel.def")
+\bbl@dirlevel=\count91
 )
-Package babel Info: Making " an active character on input line 139.
-))) (Description.aux)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)) (Description.aux)
 \openout1 = `Description.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -105,69 +107,13 @@ LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
-\scratchdimen=\dimen114
-\scratchbox=\box26
-\nofMPsegments=\count92
-\nofMParguments=\count93
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count94
-\MPscratchDim=\dimen115
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
-\everyMPtoPDFconversion=\toks17
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-)
-*geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -207,31 +153,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 11.
-
-LaTeX Warning: File `../DB Projekt 1-ER-Model.png' not found on input line 15.
-
-<../DB Projekt 1-ER-Model.png, id=1, 1075.01625pt x 754.82pt>
-File: ../DB Projekt 1-ER-Model.png Graphic file (type png)
-<use ../DB Projekt 1-ER-Model.png>
-Package pdftex.def Info: ../DB Projekt 1-ER-Model.png  used on input line 15. on input line 15.
-Package pdftex.def Info: Requested size: 455.24411pt x 319.64825pt on input line 15.
 [1
 
-{C:/Users/Christian/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../DB Projekt 1-ER-Model.png>]
-(Description.aux) ) 
+]
+File: ../model.pdf Graphic file (type pdf)
+<use ../model.pdf>
+ [2] (Description.aux) ) 
 Here is how much of TeX's memory you used:
- 2459 strings out of 493318
- 34721 string characters out of 3139046
- 103087 words of memory out of 3000000
- 5981 multiletter control sequences out of 15000+200000
- 6675 words of font info for 24 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 41i,6n,31p,280b,208s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Description.pdf (1 page, 89405 bytes).
-PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1603 strings out of 427827
+ 20488 string characters out of 3152365
+ 99551 words of memory out of 3000000
+ 5586 multiletter control sequences out of 15000+200000
+ 6416 words of font info for 28 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 25i,6n,31p,254b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on Description.pdf (2 pages).
