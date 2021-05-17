@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-17T18:42:00.098Z" agent="5.0 (Windows)" etag="dAUBp2To04czme4e-QUU" version="14.6.13" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-05-17T18:42:45.817Z" agent="5.0 (Windows)" etag="EPzYeiV7Utn1Dt8sbpnh" version="14.6.13" type="github" pages="3">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Proposition 1">
     <mxGraphModel dx="1422" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -518,7 +518,7 @@
         </mxCell>
         <mxCell id="bVpO101L37WRXFTXHiUC-11" value="1" style="resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="bVpO101L37WRXFTXHiUC-10">
           <mxGeometry x="1" relative="1" as="geometry">
-            <mxPoint x="-152" y="10" as="offset" />
+            <mxPoint x="-31" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="bVpO101L37WRXFTXHiUC-12" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="MP0Qh04_N83I57IgUe5a-1" source="bVpO101L37WRXFTXHiUC-9" target="bVpO101L37WRXFTXHiUC-1">
