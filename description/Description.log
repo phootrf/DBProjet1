@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.14)  17 MAY 2021 21:03
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.14)  18 MAY 2021 21:54
 entering extended mode
 **./Description.tex
 (Description.tex
@@ -163,17 +163,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 11.
 [1
 
-] [2]
+]
 File: ../Proposition 2.pdf Graphic file (type pdf)
 <use ../Proposition 2.pdf>
- [3] (Description.aux) ) 
+ [2] (Description.aux) ) 
 Here is how much of TeX's memory you used:
- 1983 strings out of 414190
- 28858 string characters out of 2901720
- 296998 words of memory out of 3000000
- 19507 multiletter control sequences out of 15000+200000
- 535122 words of font info for 39 fonts, out of 3000000 for 9000
+ 1981 strings out of 414190
+ 28810 string characters out of 2901720
+ 295004 words of memory out of 3000000
+ 19506 multiletter control sequences out of 15000+200000
+ 535114 words of font info for 38 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  30i,7n,33p,254b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Description.pdf (3 pages).
+Output written on Description.pdf (2 pages).
