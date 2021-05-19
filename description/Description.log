@@ -1,102 +1,117 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.14)  18 MAY 2021 21:54
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.19)  19 MAY 2021 18:09
 entering extended mode
 **./Description.tex
 (Description.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-03-06> ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\size10.clo"
-File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-05-11>
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count163
-\c@section=\count164
-\c@subsection=\count165
-\c@subsubsection=\count166
-\c@paragraph=\count167
-\c@subparagraph=\count168
-\c@figure=\count169
-\c@table=\count170
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen134
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
- ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+\bibindent=\dimen138
+)
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+)
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 105.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\xetex.def"
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen135
-\Gin@req@width=\dimen136
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
+
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count171
-\Gm@cntv=\count172
-\c@Gm@tempcnt=\count173
-\Gm@bindingoffset=\dimen137
-\Gm@wd@mp=\dimen138
-\Gm@odd@mp=\dimen139
-\Gm@even@mp=\dimen140
-\Gm@layoutwidth=\dimen141
-\Gm@layoutheight=\dimen142
-\Gm@layouthoffset=\dimen143
-\Gm@layoutvoffset=\dimen144
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks16
 
-("C:\Program Files\MiKTeX 2.9\tex/xelatex/xetexconfig\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2020/02/28 3.41 The Babel package
- ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\switch.def"
-File: switch.def 2020/02/28 3.41 Babel switching mechanism
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/05/16 3.59 The Babel package
+
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2021/05/16 3.59 Babel common definitions
+\babel@savecnt=\count186
+\U@D=\dimen149
+\l@unhyphenated=\language79
+
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/generic/babel\xebabel.def
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def))
+\bbl@readstream=\read2
 )
+\bbl@dirlevel=\count187
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/babel-english\english.ldf"
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df
 Language: english 2017/06/06 v3.3r English support from the babel system
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2020/02/28 3.41 Babel common definitions
-\babel@savecnt=\count174
-\U@D=\dimen145
- ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\xebabel.def"
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def"))
-\bbl@readstream=\read2
-\bbl@dirlevel=\count175
-)
-Package babel Info: \l@canadian = using hyphenrules for english
-(babel)             (\language0) on input line 102.
-Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language76) on input line 105.
-Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language76) on input line 108.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-xdvipdfmx.def"
-File: l3backend-xdvipdfmx.def 2020-02-23 L3 backend support: xdvipdfmx
-\g__graphics_track_int=\count176
-\l__pdf_internal_box=\box45
-\g__pdf_backend_object_int=\count177
-\g__pdf_backend_annotation_int=\count178
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def
+File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
+ ()
+\c__kernel_sys_dvipdfmx_version_int=\count188
+\l__color_backend_stack_int=\count189
+\g__color_backend_stack_int=\count190
+\g__graphics_track_int=\count191
+\l__pdf_internal_box=\box47
+\g__pdf_backend_object_int=\count192
+\g__pdf_backend_annotation_int=\count193
+\g__pdf_backend_link_int=\count194
 ) (Description.aux)
 \openout1 = `Description.aux'.
 
@@ -109,9 +124,10 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 10.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+0.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+(C:\Users\olive\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 10.
@@ -122,9 +138,10 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 
-*geometry* detected driver: pdftex
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -168,12 +185,12 @@ File: ../Proposition 2.pdf Graphic file (type pdf)
 <use ../Proposition 2.pdf>
  [2] (Description.aux) ) 
 Here is how much of TeX's memory you used:
- 1981 strings out of 414190
- 28810 string characters out of 2901720
- 295004 words of memory out of 3000000
- 19506 multiletter control sequences out of 15000+200000
- 535114 words of font info for 38 fonts, out of 3000000 for 9000
+ 2203 strings out of 411568
+ 33321 string characters out of 2834193
+ 366382 words of memory out of 3000000
+ 22352 multiletter control sequences out of 15000+600000
+ 406206 words of font info for 41 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 30i,7n,33p,254b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,7n,62p,329b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Description.pdf (2 pages).
