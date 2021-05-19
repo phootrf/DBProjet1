@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.19)  19 MAY 2021 20:29
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.5.19)  19 MAY 2021 20:31
 entering extended mode
 **./Description.tex
 (Description.tex
@@ -183,19 +183,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 File: ../Proposition 2.pdf Graphic file (type pdf)
 <use ../Proposition 2.pdf>
- [2] (Description.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [2] (Description.aux) ) 
 Here is how much of TeX's memory you used:
  2203 strings out of 411568
  33321 string characters out of 2834193
- 365405 words of memory out of 3000000
+ 365381 words of memory out of 3000000
  22352 multiletter control sequences out of 15000+600000
  406206 words of font info for 41 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,7n,62p,329b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Error 1 (driver return code) generating output;
-file Description.pdf may not be valid.
+Output written on Description.pdf (2 pages).
