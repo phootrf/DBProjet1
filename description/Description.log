@@ -1,233 +1,104 @@
-This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.3) (format=lualatex 2021.5.19)  20 MAY 2021 13:23
- restricted system commands enabled.
-**Description.tex
-(./Description.tex
-LaTeX2e <2020-10-01> patch level 4
-Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
-Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2020-12-30 2.73 ConTeXt Lua libraries -- extended c
-ollection.
-luaotfload | conf : Root cache directory is "C:/Users/olive/AppData/Local/MiKTeX
-/luatex-cache/generic/names".
-luaotfload | init : Loading fontloader "fontloader-2021-01-07.lua" from kpse-res
-olved path "C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
-ontloader-2021-01-07.lua".
-Lua-only attribute luaotfload@noligature = 1
-Lua-only attribute luaotfload@syllabe = 2
-luaotfload | init : Context OpenType loader version 0x1.8e76c8b439581p+1
-Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
-Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
-Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua-only attribute luaotfload_color_attribute = 3
-luaotfload | conf : Root cache directory is "C:/Users/olive/AppData/Local/MiKTeX
-/luatex-cache/generic/names".
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
-Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
-Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
-er'.
-Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
-Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
-Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
-Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
-Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
-font'.
-Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
-t'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
-_font'.
-Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
-t_unsafe'.
-Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
-'.
-Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
-Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2021-05-11>
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
-Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from C:/Users/olive/AppData/Local/M
-iKTeX/luatex-cache/generic/names/luaotfload-names.luc)
-\c@part=\count175
-\c@section=\count176
-\c@subsection=\count177
-\c@subsubsection=\count178
-\c@paragraph=\count179
-\c@subparagraph=\count180
-\c@figure=\count181
-\c@table=\count182
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 2.9.7300 64-bit) (preloaded format=xelatex 2020.3.14)  21 MAY 2021 09:23
+entering extended mode
+**./Description.tex
+(Description.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06> ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count163
+\c@section=\count164
+\c@subsection=\count165
+\c@subsubsection=\count166
+\c@paragraph=\count167
+\c@subparagraph=\count168
+\c@figure=\count169
+\c@table=\count170
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen138
-)
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
+\bibindent=\dimen134
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
-fg
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 105.
+Package graphics Info: Driver file: xetex.def on input line 105.
 
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
-File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\xetex.def"
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen139
-\Gin@req@width=\dimen140
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
 )
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count183
-\Gm@cntv=\count184
-\c@Gm@tempcnt=\count185
-\Gm@bindingoffset=\dimen141
-\Gm@wd@mp=\dimen142
-\Gm@odd@mp=\dimen143
-\Gm@even@mp=\dimen144
-\Gm@layoutwidth=\dimen145
-\Gm@layoutheight=\dimen146
-\Gm@layouthoffset=\dimen147
-\Gm@layoutvoffset=\dimen148
+\Gm@cnth=\count171
+\Gm@cntv=\count172
+\c@Gm@tempcnt=\count173
+\Gm@bindingoffset=\dimen137
+\Gm@wd@mp=\dimen138
+\Gm@odd@mp=\dimen139
+\Gm@even@mp=\dimen140
+\Gm@layoutwidth=\dimen141
+\Gm@layoutheight=\dimen142
+\Gm@layouthoffset=\dimen143
+\Gm@layoutvoffset=\dimen144
 \Gm@dimlist=\toks16
 
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg)) (C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
-Package: babel 2021/05/16 3.59 The Babel package
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.def
-File: babel.def 2021/05/16 3.59 Babel common definitions
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
-\bbl@readstream=\read2
-\l@afrikaans=\language2
-Package babel Info: Non-standard hyphenation setup on input line 117.
-\l@ancientgreek=\language3
-\l@armenian=\language4
-\l@assamese=\language5
-\l@basque=\language6
-\l@belarusian=\language7
-\l@bengali=\language8
-\l@bokmal=\language9
-\l@bulgarian=\language10
-\l@catalan=\language11
-\l@churchslavonic=\language12
-\l@classiclatin=\language13
-\l@coptic=\language14
-\l@croatian=\language15
-\l@czech=\language16
-\l@danish=\language17
-\l@dutch=\language18
-\l@esperanto=\language19
-\l@estonian=\language20
-\l@ethiopic=\language21
-\l@finnish=\language22
-\l@french=\language23
-\l@friulan=\language24
-\l@galician=\language25
-\l@georgian=\language26
-\l@german=\language27
-\l@greek=\language28
-\l@gujarati=\language29
-\l@hindi=\language30
-\l@hungarian=\language31
-\l@icelandic=\language32
-\l@indonesian=\language33
-\l@interlingua=\language34
-\l@irish=\language35
-\l@italian=\language36
-\l@kannada=\language37
-\l@kurmanji=\language38
-\l@latin=\language39
-\l@latvian=\language40
-\l@lithuanian=\language41
-\l@liturgicallatin=\language42
-\l@macedonian=\language43
-\l@malayalam=\language44
-\l@marathi=\language45
-\l@mongolian=\language46
-\l@mongolianlmc=\language47
-\l@monogreek=\language48
-\l@ngerman=\language49
-\l@nynorsk=\language50
-\l@occitan=\language51
-\l@oriya=\language52
-\l@pali=\language53
-\l@panjabi=\language54
-\l@piedmontese=\language55
-\l@polish=\language56
-\l@portuguese=\language57
-\l@romanian=\language58
-\l@romansh=\language59
-\l@russian=\language60
-\l@sanskrit=\language61
-\l@serbian=\language62
-\l@serbianc=\language63
-\l@slovak=\language64
-\l@slovenian=\language65
-\l@spanish=\language66
-\l@swedish=\language67
-\l@swissgerman=\language68
-\l@tamil=\language69
-\l@telugu=\language70
-\l@thai=\language71
-\l@turkish=\language72
-\l@turkmen=\language73
-\l@ukenglish=\language74
-\l@ukrainian=\language75
-\l@uppersorbian=\language76
-\l@usenglishmax=\language77
-\l@welsh=\language78
-\babelcatcodetablenum=\catcodetable12
-\bbl@pattcodes=\catcodetable13
+("C:\Program Files\MiKTeX 2.9\tex/xelatex/xetexconfig\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/02/28 3.41 The Babel package
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\switch.def"
+File: switch.def 2020/02/28 3.41 Babel switching mechanism
 )
-\babel@savecnt=\count186
-\U@D=\dimen149
-\l@unhyphenated=\language79
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
-\bbl@attr@locale=\attribute4
-))
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
+("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
 )
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/babel-english/english.l
-df
+("C:\Program Files\MiKTeX 2.9\tex/latex/babel-english\english.ldf"
 Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language74). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language74). Reported on input line 108.
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/02/28 3.41 Babel common definitions
+\babel@savecnt=\count174
+\U@D=\dimen145
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\xebabel.def"
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def"))
+\bbl@readstream=\read2
+\bbl@dirlevel=\count175
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language76) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language76) on input line 108.
 ))
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
-tex.def
-File: l3backend-luatex.def 2021-05-07 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count187
-\l__pdf_internal_box=\box47
-) (./Description.aux)
-\openout1 = Description.aux
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-xdvipdfmx.def"
+File: l3backend-xdvipdfmx.def 2020-02-23 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count176
+\l__pdf_internal_box=\box45
+\g__pdf_backend_object_int=\count177
+\g__pdf_backend_annotation_int=\count178
+) (Description.aux)
+\openout1 = `Description.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
@@ -238,10 +109,9 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-0.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 10.
 
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 10.
@@ -252,68 +122,9 @@ LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count188
-\scratchdimen=\dimen150
-\scratchbox=\box48
-\nofMPsegments=\count189
-\nofMParguments=\count190
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count191
-\MPscratchDim=\dimen151
-\MPnumerator=\count192
-\makeMPintoPDFobject=\count193
-\everyMPtoPDFconversion=\toks18
-)
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
-keys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/kvsetkeys/kvsetkeys.s
-ty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks19
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
-
-(C:/Users/olive/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-*geometry* driver: auto-detecting
-*geometry* detected driver: luatex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: luatex
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -352,32 +163,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 11.
 [1
 
-{C:/Users/olive/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-<../Proposition 2.pdf, id=9, 845.07718pt x 598.15468pt>
+]
 File: ../Proposition 2.pdf Graphic file (type pdf)
 <use ../Proposition 2.pdf>
-Package luatex.def Info: ../Proposition 2.pdf  used on input line 47.
-(luatex.def)             Requested size: 523.52794pt x 370.56pt.
- [2<../Proposition 2.pdf>] (./Description.aux))
+ [2] (Description.aux) ) 
+Here is how much of TeX's memory you used:
+ 1981 strings out of 414190
+ 28810 string characters out of 2901720
+ 296003 words of memory out of 3000000
+ 19506 multiletter control sequences out of 15000+200000
+ 535114 words of font info for 38 fonts, out of 3000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 30i,7n,33p,325b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Here is how much of LuaTeX's memory you used:
- 3299 strings out of 478378
- 100000,460012 words of node,token memory allocated
- 415 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 6 attribute, 49 glue_spec,
- 4 attribute_list, 1 write nodes
-   avail lists: 1:1,2:442,3:152,4:5,5:300,6:50,7:4598,8:1,9:204,10:4,11:248
- 23258 multiletter control sequences out of 65536+600000
- 37 fonts using 3796687 bytes
- 59i,7n,63p,329b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-<//?/c:/users/olive/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
-an10-regular.otf><//?/c:/users/olive/appdata/local/programs/miktex/fonts/opentyp
-e/public/lm/lmroman12-bold.otf><//?/c:/users/olive/appdata/local/programs/miktex
-/fonts/opentype/public/lm/lmroman12-regular.otf><//?/c:/users/olive/appdata/loca
-l/programs/miktex/fonts/opentype/public/lm/lmroman17-regular.otf>
-Output written on Description.pdf (2 pages, 128528 bytes).
-
-PDF statistics: 48 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 100000000)
-
+Output written on Description.pdf (2 pages).
