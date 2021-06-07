@@ -10,8 +10,8 @@ create table trip
 	 "Baltisberger London Jun21" vs "Baltisberger London Mar19" (names)
 	 is more meaningful than 234 vs 123 (IDs) */
 	 name varchar(100) not null unique,
-	 start_date date,
-	 end_date date,
+	 start_date date not null,
+	 end_date date not null,
 	 desctiption varchar(500),
 	 price integer default 0,
 	 /* End date cannot be before start date.
@@ -25,17 +25,11 @@ create table accommodation
 	 /* Accommodation names must be unique.
 	 It may be that there are, for example, two Hilton hotels in Paris
 	 (e.g. Hilton Downtown and Hilton Airport). */
-	 name varchar(30) not null unique,
-	 /* What if an accommodation is not in a city?
-	 Should we rename city to region?
-	 Example: Barcelona and Costa Blanca both work with region,
-	 but not with city.
-	 City/region cannot be null in order two distinguish the Hilton in Downtown Paris
-	 from the Hilton in Downtown London. */
+	 name varchar(50) not null unique,
 	 city varchar(30) not null,
 	 country varchar(30) not null,
-	 begin_date date,
-	 number_of_nights integer,
+	 begin_date date not null,
+	 number_of_nights integer not null,
 	 type varchar(30),
 	 -- At least one night in accommodation.
 	 check (number_of_nights > 0),
