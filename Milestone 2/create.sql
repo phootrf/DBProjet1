@@ -75,5 +75,5 @@ create table buys
 create table sells
 	();
 
-ceate table works_at
+create table works_at
 	();
