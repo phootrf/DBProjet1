@@ -1,79 +1,99 @@
-drop table accommodation;
-drop table trip;
+CREATE TABLE trip 
+    (trip_id        INTEGER PRIMARY KEY NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     start_date     DATE NOT NULL,  --Format: YYYY-MM-DD
+     end_date       DATE NOT NULL,
+     description    VARCHAR(1024),  --Der String ist hier maximal 1024 Zeichen lang
+     price          DECIMAL(10,2)); --Format: DECIMAL(size, d) mit size = Ziffern, d = Kommastellen.
+                                    --Standardmässig wird für Geldbeträge DECIMAL(19,4) eingesetzt
+CREATE TABLE client
+    (client_id      INTEGER PRIMARY KEY NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     surname        VARCHAR(30) NOT NULL,
+     address        VARCHAR(60),
+     postcode       INTEGER,
+     city           VARCHAR(60),
+     email          VARCHAR(60),
+     phone_number   INTEGER);
 
--- Create relations for entities
+CREATE TABLE employee 
+    (employee_id    INTEGER PRIMARY KEY NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     surname        VARCHAR(30) NOT NULL,
+     email          VARCHAR(60),
+     phone_number   INTEGER);
 
-create table trip
-	(id integer primary key,
-	 /* Trip names must be unique in order to distinguish trips
-	 by its names and not only by its IDs.
-	 "Baltisberger London Jun21" vs "Baltisberger London Mar19" (names)
-	 is more meaningful than 234 vs 123 (IDs) */
-	 name varchar(100) not null unique,
-	 start_date date not null,
-	 end_date date not null,
-	 desctiption varchar(500),
-	 price integer default 0,
-	 /* End date cannot be before start date.
-	 They can be equal if the trip only consists
-	 of an activity or a transport (no accommodation). */
-	 check (end_date >= start_date)
-	);
+CREATE TABLE office 
+    (office_id      INTEGER PRIMARY KEY NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     address        VARCHAR(60),
+     postcode       INTEGER,
+     city           VARCHAR(60),
+     email          VARCHAR(60),
+     phone_number   INTEGER);
 
-create table accommodation
-	(id integer primary key,
-	 /* Accommodation names must be unique.
-	 It may be that there are, for example, two Hilton hotels in Paris
-	 (e.g. Hilton Downtown and Hilton Airport). */
-	 name varchar(50) not null unique,
-	 city varchar(30) not null,
-	 country varchar(30) not null,
-	 begin_date date not null,
-	 number_of_nights integer not null,
-	 type varchar(30),
-	 -- At least one night in accommodation.
-	 check (number_of_nights > 0),
-	 -- Type must be one of the following accommodation types:
-	 check (type in ('Hotel', 'Hostel', 'B&B', 'Holiday home', 'Other'))
-	 );
-	 
-create table transport
-	();
+CREATE TABLE payment 
+    (payment_id     INTEGER PRIMARY KEY NOT NULL,
+     amount         DECIMAL(10,2),
+     payment_date   DATE,
+     payment_method CHAR(11) CHECK (payment_method in ('credit card', 'cash', 'paypal', 'transfer')));
 
-create table activity
-	();
+CREATE TABLE activity 
+    (activity_id    INTEGER PRIMARY KEY NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     description    VARCHAR(1024),
+     type           VARCHAR(30),
+     contact        VARCHAR(30)); --Für dieses Feld war mir nicht klar, welcher Datentyp Sinn macht
 
-create table payment
-	();
+CREATE TABLE transport 
+    (transport_id   INTEGER PRIMARY KEY NOT NULL,
+     start          VARCHAR(30),
+     destination    VARCHAR(30),
+     type           VARCHAR(30),
+     transport_date DATE);
 
-create table client
-	();
+CREATE TABLE accomodation 
+    (acc_id         INTEGER PRIMARY KEY NOT NULL,
+     city           VARCHAR(30),
+     country        VARCHAR(30),
+     address        VARCHAR(60),
+     begin_date     DATE,
+     overn_stays    INTEGER,
+     type           VARCHAR(30));
 
-create table employee
-	();
+CREATE TABLE buys 
+    (client_id      INTEGER NOT NULL REFERENCES client ON DELETE CASCADE,
+     trip_id        INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
+     buy_date       DATE,
+     PRIMARY KEY    (trip_id));
 
-create table office
-	();
+CREATE TABLE sells 
+    (employee_id    INTEGER NOT NULL REFERENCES employee ON DELETE CASCADE,
+     trip_id        INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
+     sell_date      DATE,
+     PRIMARY KEY    (trip_id));
 
--- Create relations for relationships
+CREATE TABLE works_at 
+    (employee_id    INTEGER NOT NULL REFERENCES employee ON DELETE CASCADE,
+     office_id      INTEGER NOT NULL REFERENCES office ON DELETE CASCADE,
+     PRIMARY KEY    (employee_id));
 
-create table has_accommodation
-	();
+CREATE TABLE has_payment 
+    (payment_id     INTEGER NOT NULL REFERENCES payment ON DELETE CASCADE,
+     trip_id        INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
+     PRIMARY KEY    (trip_id));
 
-create table has_transport
-	();
+CREATE TABLE has_activity 
+    (activity_id  INTEGER NOT NULL REFERENCES activity ON DELETE CASCADE,
+     trip_id      INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
+     PRIMARY KEY    (trip_id));
 
-create table has_activity
-	();
+CREATE TABLE has_transport
+    (transport_id  INTEGER NOT NULL REFERENCES transport ON DELETE CASCADE,
+     trip_id      INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
+     PRIMARY KEY    (trip_id));
 
-create table has_payment
-	();
-
-create table buys
-	();
-
-create table sells
-	();
-
-create table works_at
-	();
+Create TABLE has_accomodation
+    (acc_id INTEGER NOT NULL REFERENCES accomodation ON DELETE CASCADE,
+     trip_id      INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
+     PRIMARY KEY    (trip_id));
