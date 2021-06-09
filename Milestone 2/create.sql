@@ -27,8 +27,8 @@ CREATE TABLE employee
      surname        VARCHAR(30) NOT NULL,
      name           VARCHAR(30) NOT NULL,
      email          VARCHAR(60),
-     phone          VARCHAR(20) NOT NULL
-     seniority      INTEGER DEFAULT 0
+     phone          VARCHAR(20) NOT NULL,
+     seniority      INTEGER DEFAULT 0,
      works_at       INTEGER NOT NULL,
      FOREIGN KEY(works_at) REFERENCES office(id));   --length of service in years
 
