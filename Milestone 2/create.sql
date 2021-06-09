@@ -34,7 +34,7 @@ CREATE TABLE office
      postcode       INTEGER,
      city           VARCHAR(60),
      email          VARCHAR(60),
-     phone_number   INTEGER);
+     phone          VARCHAR(20) NOT NULL);
 
 CREATE TABLE payment 
     (id             SERIAL PRIMARY KEY NOT NULL,
