@@ -73,7 +73,7 @@ CREATE TABLE accommodation
      name           VARCHAR(60) NOT NULL,
      begin_date     DATE NOT NULL,
      duration       INTEGER CHECK (duration > 0),
-     type           VARCHAR(15) CHECK (type IN ('hotel', 'hostel', 'b&b', 'holiday home', 'other'));
+     type           VARCHAR(15) CHECK (type IN ('hotel', 'hostel', 'b&b', 'holiday home', 'other')));
 
 CREATE TABLE has_activity 
     (activity_id  INTEGER NOT NULL REFERENCES activity ON DELETE CASCADE,
