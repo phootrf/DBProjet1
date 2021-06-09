@@ -1,3 +1,32 @@
+CREATE TABLE office 
+    (id             SERIAL PRIMARY KEY NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     address        VARCHAR(60),
+     postcode       INTEGER,
+     city           VARCHAR(60),
+     email          VARCHAR(60),
+     phone          VARCHAR(20) NOT NULL);
+     
+ CREATE TABLE employee 
+    (id             SERIAL PRIMARY KEY NOT NULL,
+     surname        VARCHAR(30) NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     email          VARCHAR(60),
+     phone          VARCHAR(20) NOT NULL,
+     seniority      INTEGER DEFAULT 0,
+     works_at       INTEGER NOT NULL,
+     FOREIGN KEY(works_at) REFERENCES office(id));   --length of service in years
+
+CREATE TABLE client
+    (id             SERIAL PRIMARY KEY NOT NULL,
+     surname        VARCHAR(30) NOT NULL,
+     name           VARCHAR(30) NOT NULL,
+     address        VARCHAR(60),
+     postcode       INTEGER,
+     city           VARCHAR(60),
+     email          VARCHAR(60),
+     phone          VARCHAR(20) NOT NULL);
+
 CREATE TABLE trip 
     (id                             SERIAL PRIMARY KEY NOT NULL,        --autoinkrementierende Nummer
      name                           VARCHAR(60) NOT NULL,
@@ -12,34 +41,6 @@ CREATE TABLE trip
      FOREIGN KEY(sold_by)           REFERENCES employee(id),
      CHECK (end_date >= start_date)); --Format: DECIMAL(size, d) mit size = Ziffern, d = Kommastellen.
                                                    --Standardmässig wird für Geldbeträge DECIMAL(19,4) eingesetzt
-CREATE TABLE client
-    (id             SERIAL PRIMARY KEY NOT NULL,
-     surname        VARCHAR(30) NOT NULL,
-     name           VARCHAR(30) NOT NULL,
-     address        VARCHAR(60),
-     postcode       INTEGER,
-     city           VARCHAR(60),
-     email          VARCHAR(60),
-     phone          VARCHAR(20) NOT NULL);
-
-CREATE TABLE employee 
-    (id             SERIAL PRIMARY KEY NOT NULL,
-     surname        VARCHAR(30) NOT NULL,
-     name           VARCHAR(30) NOT NULL,
-     email          VARCHAR(60),
-     phone          VARCHAR(20) NOT NULL,
-     seniority      INTEGER DEFAULT 0,
-     works_at       INTEGER NOT NULL,
-     FOREIGN KEY(works_at) REFERENCES office(id));   --length of service in years
-
-CREATE TABLE office 
-    (id             SERIAL PRIMARY KEY NOT NULL,
-     name           VARCHAR(30) NOT NULL,
-     address        VARCHAR(60),
-     postcode       INTEGER,
-     city           VARCHAR(60),
-     email          VARCHAR(60),
-     phone          VARCHAR(20) NOT NULL);
 
 CREATE TABLE payment 
     (id             SERIAL PRIMARY KEY NOT NULL,
