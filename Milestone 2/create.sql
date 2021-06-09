@@ -79,14 +79,14 @@ CREATE TABLE accommodation
 CREATE TABLE has_activity 
     (activity_id  INTEGER NOT NULL REFERENCES activity ON DELETE CASCADE,
      trip_id      INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
-     PRIMARY KEY    (trip_id));
+     PRIMARY KEY    (activity_id, trip_id));
 
 CREATE TABLE has_transport
     (transport_id  INTEGER NOT NULL REFERENCES transport ON DELETE CASCADE,
      trip_id      INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
-     PRIMARY KEY    (trip_id));
+     PRIMARY KEY    (transport_id, trip_id));
 
-Create TABLE has_accomodation
-    (acc_id INTEGER NOT NULL REFERENCES accomodation ON DELETE CASCADE,
+Create TABLE has_accommodation
+    (accommodation_id INTEGER NOT NULL REFERENCES accomodation ON DELETE CASCADE,
      trip_id      INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE,
-     PRIMARY KEY    (trip_id));
+     PRIMARY KEY    (accommodation_id, trip_id));
