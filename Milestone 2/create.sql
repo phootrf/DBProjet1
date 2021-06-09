@@ -4,24 +4,28 @@ CREATE TABLE trip
      start_date     DATE NOT NULL,  --Format: YYYY-MM-DD
      end_date       DATE NOT NULL,
      description    VARCHAR(1024),  --Der String ist hier maximal 1024 Zeichen lang
-     price          DECIMAL(10,2) DEFAULT 0.00); --Format: DECIMAL(size, d) mit size = Ziffern, d = Kommastellen.
+     price          DECIMAL(10,2) DEFAULT 0.00,
+     CHECK (end_date >= start_date)); --Format: DECIMAL(size, d) mit size = Ziffern, d = Kommastellen.
                                                    --Standardmässig wird für Geldbeträge DECIMAL(19,4) eingesetzt
 CREATE TABLE client
     (id             SERIAL PRIMARY KEY NOT NULL,
-     name           VARCHAR(30) NOT NULL,
      surname        VARCHAR(30) NOT NULL,
+     name           VARCHAR(30) NOT NULL,
      address        VARCHAR(60),
      postcode       INTEGER,
      city           VARCHAR(60),
      email          VARCHAR(60),
-     phone          INTEGER);
+     phone          VARCHAR(20) NOT NULL);
 
 CREATE TABLE employee 
     (id             SERIAL PRIMARY KEY NOT NULL,
-     name           VARCHAR(30) NOT NULL,
      surname        VARCHAR(30) NOT NULL,
+     name           VARCHAR(30) NOT NULL,
      email          VARCHAR(60),
-     phone_number   INTEGER);
+     phone          VARCHAR(20) NOT NULL
+     seniority      INTEGER DEFAULT 0
+     works_at       INTEGER NOT NULL,
+     FOREIGN KEY(works_at) REFERENCES office(id));   --length of service in years
 
 CREATE TABLE office 
     (id             SERIAL PRIMARY KEY NOT NULL,
