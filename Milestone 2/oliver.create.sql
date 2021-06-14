@@ -1,28 +1,29 @@
 -- CREATE RELATIONS FOR ENTITIES
 
 create table office 
-    (id             			serial primary key not null, -- auto-incrementing number in PostgreSQL (same id should not be used twice)
+    (id             			serial primary key not null,-- auto-incrementing number in PostgreSQL (same id should not be used twice)
      name           			varchar(30) not null,
      address        			varchar(60) not null,
      postcode       			integer not null,
      city           			varchar(60) not null,
-     email          			varchar(60), -- email is not essential
-     phone          			varchar(20) not null); -- phone number is essential
-     
+     email          			varchar(60),                -- email is not essential
+     phone          			varchar(20) not null        -- phone number is essential
+     );
+
  create table employee 
     (id             			serial primary key not null,
      surname        			varchar(30) not null,
      name           			varchar(30) not null,
-     email          			varchar(60), -- email is not essential
-     phone          			varchar(20) not null, -- phone number is essential
+     email          			varchar(60),                -- email is not essential
+     phone          			varchar(20) not null,       -- phone number is essential
 /* 
 Oliver: Wir sollten aus meiner Sicht keinen Default-Wert für Seniority von 0 setzten.
 Denn Mitarbeiter, die neu beim Reisebüro arbeiten, haben auch eine Seniority von 0.
 Daher können neue Mitarbeiter nicht von Mitarbeitern unterschieden werden,
 bei denen keine Seniority angegeben wurde.
 */
-     seniority      			integer, -- length of service in years
-     works_at       			integer, -- foreign key, is set to null if corresponding key is deleted -> cannot use not null
+     seniority      			integer,                   -- length of service in years
+     works_at       			integer,                   -- foreign key, is set to null if corresponding key is deleted -> cannot use not null
      foreign key (works_at)		references office(id) on delete set null on update cascade);
 /*
 If the key (i.e. ID) of an office is updated, we want the corresponding foreign key in employee to be updated as well.
@@ -36,23 +37,29 @@ create table client
      surname        			varchar(30) not null,
      name           			varchar(30) not null,
      address        			varchar(60) not null,
-     postcode       			integer not null, -- integer works as postcode does not start with 0
+     postcode       			integer not null,           -- integer works as postcode does not start with 0
      city           			varchar(60) not null,
-     email          			varchar(60), -- email is not essential
-     phone          			varchar(20) not null); -- phone number is essential
+     email          			varchar(60),                -- email is not essential
+     phone          			varchar(20) not null      -- phone number is essential
+    );
 
 create table trip 
     (id							serial primary key not null,
      name						varchar(60) not null,
-     start_date					date not null, -- format: yyyy-mm-dd
+     start_date					date not null,              -- format: yyyy-mm-dd
      end_date					date not null,
      description				varchar(1024),
      price						decimal(10,2) default 0.00, -- format: decimal(size, d) with size = digits, d = decimal points
      bought_by					integer not null,
      sold_by					integer not null,
-     transaction_date			date not null, -- date at which trip was bought/sold
+     transaction_date			date not null,              -- date at which trip was bought/sold
      foreign key (bought_by)	references client(id) on delete set null on update cascade, -- same argument as for employee-office (see above)
+     -- ich bin nicht sicher, ob hier das gleiche Argument wie oben stimmt. Es könnte sein dass wir ein Archiv haben wollen.
+     -- Ein Kunde ist immer ein Kunde. Wenn wir etwas falsch mit einem Kunde gemacht haben, werden wir ein update machen. 
+     -- Wenn ein Kunde keine Reise mehr bestellt, heisst das nicht dass wir ihn aus dem Datenbank streichen wollen. 
      foreign key (sold_by)		references employee(id) on delete set null on update cascade, -- same argument as for employee-office (see above)
+     -- wie oben für Kunde. Vieleicht sollten wir entscheiden ob ein Mitarbeiter aktiv ist oder nicht. Wenn nicht mehr aktiv, kann er nicht mehr verkaufen
+     -- wir haben aber ein Archiv der Reisen, die er organisiert hat. 
      check (end_date >= start_date));
 
 create table payment 
