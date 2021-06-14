@@ -1,7 +1,7 @@
 -- CREATE RELATIONS FOR ENTITIES
 
 CREATE TABLE office 
-    (id             			SERIAL PRIMARY KEY NOT NULL, -- Auto-incrementing number in PostgreSQL
+    (id             			SERIAL PRIMARY KEY NOT NULL, -- Auto-incrementing integer number in PostgreSQL
      name           			VARCHAR(30) NOT NULL,
      address        			VARCHAR(60) NOT NULL,
      postcode       			INTEGER NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE activity
      city           			VARCHAR(30) NOT NULL,
      country        			VARCHAR(30) NOT NULL,
      date           			DATE NOT NULL, 
-     CHECK (type IN ('food', 'seightseeing', 'sport', 'culture', 'other')));
+     CHECK (type IN ('food', 'sightseeing', 'sport', 'culture', 'other')));
 
 CREATE TABLE transport 
     (id             			SERIAL PRIMARY KEY NOT NULL,
