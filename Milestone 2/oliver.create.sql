@@ -121,5 +121,5 @@ create table has_transport
 
 Create table has_accommodation
     (trip_id      				integer not null references trip on delete cascade on update cascade,
-	 accommodation_id 			integer not null references accommodation on delete cascade on update cascade, 
-     primary key (trip_id, accommodation_id)); -- N:M relationship means both keys are needed
+	 accommodation_id 			integer not null references accommodation on delete cascade on update cascade,
+	 primary key (trip_id, accommodation_id)); -- N:M relationship means both keys are needed
