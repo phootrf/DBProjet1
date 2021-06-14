@@ -60,7 +60,8 @@ create table trip
      foreign key (sold_by)		references employee(id) on delete set null on update cascade, -- same argument as for employee-office (see above)
      -- wie oben für Kunde. Vieleicht sollten wir entscheiden ob ein Mitarbeiter aktiv ist oder nicht. Wenn nicht mehr aktiv, kann er nicht mehr verkaufen
      -- wir haben aber ein Archiv der Reisen, die er organisiert hat. 
-     check (end_date >= start_date));
+     check (end_date >= start_date)
+     );
 
 create table payment 
     (id             			serial primary key not null,
@@ -69,8 +70,12 @@ create table payment
      method         			varchar(15),
      trip_id        			integer not null,
      foreign key (trip_id)		references trip(id),
-     check (method in ('credit card', 'cash', 'paypal', 'transfer', 'other')));
+     check (method in ('credit card', 'cash', 'paypal', 'transfer', 'other'))
+     );
 
+--Für alle die hier unter Tabellen frage ich mich, ob Feld date nicht zur Tabelle has... gehört. 
+--Ein Hotel wird zum Beispiel für ein Datum gewählt werden. Aber was passiert, wenn wir wieder das gleiche Hotel wählen wollen: 
+-- Im moment, weil die Daten nicht immer die gleichen sind, müssen wir von null wieder die Daten eintragen. Das geht nicht. 
 create table activity 
     (id             			serial primary key not null,
      name           			varchar(30) not null,
@@ -79,7 +84,8 @@ create table activity
      city           			varchar(30) not null,
      country        			varchar(30) not null,
      date           			date not null, 
-     check (type in ('food', 'seightseeing', 'sport', 'culture', 'other')));
+     check (type in ('food', 'seightseeing', 'sport', 'culture', 'other'))
+     );
 
 create table transport 
     (id             			serial primary key not null,
@@ -87,7 +93,8 @@ create table transport
      destination    			varchar(30) not null,
      type           			varchar(30),
      date           			date not null,
-     check (type in ('plane', 'train', 'bus', 'other')));
+     check (type in ('plane', 'train', 'bus', 'other'))
+     );
 
 create table accommodation 
     (id             			serial primary key not null,
@@ -96,10 +103,11 @@ create table accommodation
      address        			varchar(60) not null,
      name           			varchar(60) not null,
      begin_date     			date not null,
-     duration       			integer, -- duration of stay (number of nights)
+     duration       			integer,                -- duration of stay (number of nights)
      type           			varchar(15),
      check (duration > 0),
-     check (type in ('hotel', 'hostel', 'b&b', 'holiday home', 'other')));
+     check (type in ('hotel', 'hostel', 'b&b', 'holiday home', 'other'))
+     );
 
 -- CREATE RELATIONS FOR RELATIONSHIPS
 

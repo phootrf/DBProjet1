@@ -114,7 +114,7 @@ insert into client values(default,'Capucine','Paulet','Lichtmattstrasse 35',8236
 insert into trip values(default, 'Hartmann London-Paris Jan21', '2021-01-01', '2021-01-07', 'bla', 2500, 1, 1, '2020-10-01');
 insert into trip values(default, 'Dennis Venice Jul21', '2021-07-10', '2021-07-17', 'bla', 1500, 2, 2, '2021-04-10');
 insert into trip values(default, 'Boivin Italy Aug21', '2021-08-01', '2021-08-15', 'bla', 3500, 3, 3, '2021-03-01')
-insert into trip values(default, 'Travel to Rome', '2021-07-25', '2021-07-31', 'Visit Rome and all famous monuments', 1450, 23,1, '2021-06-14' );
+insert into trip values(default, 'Travel to Rome Jul21', '2021-07-25', '2021-07-31', 'Visit Rome and all famous monuments', 1450, 23,1, '2021-06-14' );
 
 -- payment
 insert into payment values(default, 2500, '2020-12-31','paypal' ,1);
@@ -132,10 +132,21 @@ insert into activity values(default, 'Louvre', 'bla', 'culture', 'Paris', 'Franc
 insert into activity values(default, 'Eifel Tower', 'bla', 'seightseeing', 'Paris', 'France', '2020-01-03');
 insert into activity values(default, 'Chelsea Match', 'bla', 'sport', 'London', 'UK', '2020-01-06');
 insert into activity values(default, 'Bungee Jumping', 'bla', 'sport', 'Milano', 'Italy', '2020-08-06');
+insert into activity values(default, 'Il Colosseo', 'description...', 'culture', 'Roma', 'Italia', '2021-07-25');
+
 
 -- transport
+insert into transport values(default, 'Bern', 'Roma Termini', 'train', '2021-07-25');
+insert into transport values(default, 'Roma Termini', 'Bern', 'train', '2021-07-31');
+insert into transport values(default, 'Zürich', 'Venezia Sta Lucia', 'train', '2021-07-10');
+insert into transport values(default, 'Venezia Sta Lucia', 'Zürich', 'train', '2021-07-17');
+
+
 
 -- accommodation
+insert into accommodation values(default, 'Roma', 'Italia', 'Piazza del Popolo', 'Il Grande Hotel', '2021-07-25', 6, 'hotel' );
+insert into accommodation values(default, 'Venezia', 'Italia', 'Via Ortigara 10', 'Anda Venice Hostel', '2021-07-10', 7, 'hostel' );
+
 
 -- has_activity (trip_id, activity_id)
 insert into has_activity values(1, 1);
@@ -144,7 +155,12 @@ insert into has_activity values(1, 3);
 insert into has_activity values(3, 4);
 
 -- has_transport
+insert into has_transport values(4,1);
+insert into has_transport values(4,2);
+insert into has_transport values(2,3);
+insert into has_transport values(2,4);
 
 -- has_accommodation
-
+insert into has_accommodation values(4, 1);
+insert into has_accommodation values(2, 2);
 
