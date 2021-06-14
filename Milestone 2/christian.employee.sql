@@ -1,15 +1,3 @@
-CREATE TABLE employee (
-  id serial PRIMARY KEY NOT NULL,
-  surname varchar(20) NOT NULL,
-  name varchar(23) NOT NULL,
-  email varchar(100) NOT NULL,
-  phone varchar(25) NOT NULL, 
-  length_of_service integer NOT NULL,
-  works_for integer NOT NULL,
-  foreign key (works_for) references office(id)
-);
-
-
 insert into employee values (default,	'Karolin'	,'Herrmann'		,'KarolinHerrmann@armyspy.com'	,'032 327 90 34',	24, 1);	
 insert into employee values (default,	'Gaetane'	,'Coudert'		,'GaetaneCoudert@einrot.com'  	,'091 828 11 18',	13, 1);
 insert into employee values (default,	'Roux'		,'Perreault'	,'RouxPerreault@gustr.com'	  	,'052 396 77 60',	1, 2);	

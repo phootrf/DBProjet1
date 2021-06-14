@@ -1,17 +1,4 @@
-﻿CREATE TABLE client (
-  id serial PRIMARY KEY,
-  name varchar(20) NOT NULL,
-  surname varchar(23) NOT NULL,
-  address varchar(100) NOT NULL,
-  postcode varchar(15) NOT NULL,
-  city varchar(100) NOT NULL,
-  email varchar(100) NOT NULL,
-  phone varchar(25) NOT NULL
-);
-
-
-
-insert into client values(default,'Karin','Hartmann','Landstrasse 133',8207,'Schaffhausen','KarinHartmann@gustr.com','044 286 68 44');
+﻿insert into client values(default,'Karin','Hartmann','Landstrasse 133',8207,'Schaffhausen','KarinHartmann@gustr.com','044 286 68 44');
 insert into client values(default,'Claude','Dennis','Herrenberg 131',1663,'Pringy','ClaudeDennis@fleckens.hu','026 297 20 94');
 insert into client values(default,'Noël','Boivin','Caltgadira 79',6883,'Novazzano','NoelBoivin@teleworm.us','091 221 63 20');
 insert into client values(default,'Brigliador','Despins','Damunt 36',4924,'Obersteckholz','BrigliadorDespins@superrito.com','062 390 70 30');
