@@ -129,9 +129,9 @@ insert into activity values(default, 'Bungee Jumping', 'bla', 'sport', 'Milano',
 
 -- has_activity (activity_id, trip_id)
 insert into has_activity values(1, 1);
-insert into has_activity values(2, 1);
-insert into has_activity values(3, 1);
-insert into has_activity values(4, 3);
+insert into has_activity values(1, 2);
+insert into has_activity values(1, 3);
+insert into has_activity values(3, 4);
 
 -- has_transport
 
