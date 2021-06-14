@@ -40,16 +40,16 @@ CREATE TABLE client
      phone          			VARCHAR(20) NOT NULL); -- Phone number is essential
 
 CREATE TABLE trip 
-    (id							SERIAL PRIMARY KEY NOT NULL,
-     name						VARCHAR(60) NOT NULL,
-     start_date					DATE NOT NULL, --Format: YYYY-MM-DD
-     end_date					DATE NOT NULL,
-     description				VARCHAR(1024),
-     price						DECIMAL(10,2) DEFAULT 0.00, --Format: DECIMAL(size, d) with size = digits, d = decimal points
-     bought_by					INTEGER NOT NULL,
-     sold_by					INTEGER NOT NULL,
+    (id					SERIAL PRIMARY KEY NOT NULL,
+     name				VARCHAR(60) NOT NULL,
+     start_date				DATE NOT NULL, --Format: YYYY-MM-DD
+     end_date				DATE NOT NULL,
+     description			VARCHAR(1024),
+     price				DECIMAL(10,2) DEFAULT 0.00, --Format: DECIMAL(size, d) with size = digits, d = decimal points
+     bought_by				INTEGER NOT NULL,
+     sold_by				INTEGER NOT NULL,
      transaction_date			DATE NOT NULL, -- Date at which trip was bought/sold
-     FOREIGN KEY (bought_by)	REFERENCES client(id),
+     FOREIGN KEY (bought_by)		REFERENCES client(id),
      FOREIGN KEY (sold_by)		REFERENCES employee(id),
      CHECK (end_date >= start_date));
 
@@ -60,7 +60,7 @@ CREATE TABLE payment
      method         			VARCHAR(15),
      trip_id        			INTEGER NOT NULL,
      FOREIGN KEY (trip_id)		REFERENCES trip(id),
-	 CHECK (method IN ('credit card', 'cash', 'paypal', 'transfer', 'other')));
+     CHECK (method IN ('credit card', 'cash', 'paypal', 'transfer', 'other')));
 
 CREATE TABLE activity 
     (id             			SERIAL PRIMARY KEY NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE activity
      city           			VARCHAR(30) NOT NULL,
      country        			VARCHAR(30) NOT NULL,
      date           			DATE NOT NULL, 
-	 CHECK (type IN ('food', 'seightseeing', 'sport', 'culture', 'other')));
+     CHECK (type IN ('food', 'seightseeing', 'sport', 'culture', 'other')));
 
 CREATE TABLE transport 
     (id             			SERIAL PRIMARY KEY NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE transport
      destination    			VARCHAR(30) NOT NULL,
      type           			VARCHAR(30),
      date           			DATE NOT NULL,
-	 CHECK (type IN ('plane', 'train', 'bus', 'other')));
+     CHECK (type IN ('plane', 'train', 'bus', 'other')));
 
 CREATE TABLE accommodation 
     (id             			SERIAL PRIMARY KEY NOT NULL,
@@ -89,8 +89,8 @@ CREATE TABLE accommodation
      begin_date     			DATE NOT NULL,
      duration       			INTEGER, -- Duration of stay (number of nights)
      type           			VARCHAR(15),
-	 CHECK (duration > 0),
-	 CHECK (type IN ('hotel', 'hostel', 'b&b', 'holiday home', 'other')));
+     CHECK (duration > 0),
+     CHECK (type IN ('hotel', 'hostel', 'b&b', 'holiday home', 'other')));
 
 -- CREATE RELATIONS FOR RELATIONSHIPS
 
@@ -99,7 +99,7 @@ CREATE TABLE accommodation
 
 CREATE TABLE has_activity
     (activity_id  				INTEGER NOT NULL REFERENCES activity ON DELETE CASCADE ON UPDATE CASCADE,
-	 trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
+     trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
      PRIMARY KEY (activity_id, trip_id)); -- N:M relationship means both keys are needed
 	 /*	If the key of an activity/trip is updated, we want the corresponding foreign keys in has_activity to be updated as well.
 	 	If a trip is deleted, all activities of this trip should be deleted as well (on delete cascade).
@@ -112,6 +112,6 @@ CREATE TABLE has_transport
      PRIMARY KEY (transport_id, trip_id)); -- N:M relationship means both keys are needed
 
 Create TABLE has_accommodation
-    (accommodation_id 			INTEGER NOT NULL REFERENCES accommodation ON DELETE CASCADE ON UPDATE CASCADE,
+    (accommodation_id 				INTEGER NOT NULL REFERENCES accommodation ON DELETE CASCADE ON UPDATE CASCADE,
      trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
      PRIMARY KEY (accommodation_id, trip_id)); -- N:M relationship means both keys are needed
