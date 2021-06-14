@@ -1,10 +1,10 @@
 -- office
-insert into office values(default, 'Travel Agency Geneva', 'Rte du lac 1', 1211, 'Genève', 'geneva@travelagency.ch', '031 456 45 78');
-insert into office values(default, 'Travel Agency Bern', 'Neuengasse 1', 3001, 'Bern', 'bern@travelagency.ch', '031 456 45 78');
-insert into office values(default, 'Travel Agency Zürich', 'Färbergasse 1', 8001, 'Zürich', 'zurich@travelagency.ch', '031 456 45 78');
-insert into office values(default, 'Travel Agency Basel', 'Falknerstrasse 41', 4001, 'Basel', 'basel@travelagency.ch', '031 456 45 78');
-insert into office values(default, 'Travel Agency Luzern', 'Frohburgstrasse 1', 6002, 'Luzern', 'luzern@travelagency.ch', '031 456 45 78');
-insert into office values(default, 'Travel Agency Lugano', 'Via San Gottardo 1', 6900, 'Lugano', 'lugano@travelagency.ch', '031 456 45 78');
+insert into office values(default, 'Travel Agency Geneva', 'Rte du lac 1', 1211, 'Genève', 'geneva@travelagency.ch', '032 327 90 34');
+insert into office values(default, 'Travel Agency Bern', 'Neuengasse 1', 3001, 'Bern', 'bern@travelagency.ch', '052 396 77 60');
+insert into office values(default, 'Travel Agency Zürich', 'Färbergasse 1', 8001, 'Zürich', 'zurich@travelagency.ch', '032 444 40 22');
+insert into office values(default, 'Travel Agency Basel', 'Falknerstrasse 41', 4001, 'Basel', 'basel@travelagency.ch', '026 255 88 95');
+insert into office values(default, 'Travel Agency Luzern', 'Frohburgstrasse 1', 6002, 'Luzern', 'luzern@travelagency.ch', '091 401 77 77');
+insert into office values(default, 'Travel Agency Lugano', 'Via San Gottardo 1', 6900, 'Lugano', 'lugano@travelagency.ch', '026 688 94 55');
 
 -- employee (generated with https://fr.fakenamegenerator.com/order.php)
 insert into employee values (default,	'Karolin'	,'Herrmann'		,'KarolinHerrmann@armyspy.com'	,'032 327 90 34',	24, 1);	
