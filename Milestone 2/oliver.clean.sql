@@ -10,4 +10,3 @@ drop table trip;
 drop table client;
 drop table employee;
 drop table office;
-

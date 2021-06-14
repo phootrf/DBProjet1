@@ -102,8 +102,8 @@ in the N-side entity (see foreign keys above). Thus, only the N:M relationships 
 */
 
 create table has_activity
-    (activity_id  			integer not null references activity on delete cascade on update cascade,
-     trip_id      			integer not null references trip on delete cascade on update cascade,
+    (trip_id      			integer not null references trip on delete cascade on update cascade,
+	 activity_id  			integer not null references activity on delete cascade on update cascade,
      primary key (trip_id, activity_id)); -- N:M relationship means both keys are needed
 /*
 If the key of an activity/trip is updated (i.e. ID is changed), the corresponding foreign keys in
@@ -115,11 +115,11 @@ The same argument holds for has_transport and has_accommodation (see below).
 */
 
 create table has_transport
-    (transport_id  			integer not null references transport on delete cascade on update cascade,
-     trip_id      			integer not null references trip on delete cascade on update cascade,
+    (trip_id      			integer not null references trip on delete cascade on update cascade,
+	 transport_id  			integer not null references transport on delete cascade on update cascade,
      primary key (trip_id, transport_id)); -- N:M relationship means both keys are needed
 
 Create table has_accommodation
-    (accommodation_id 			integer not null references accommodation on delete cascade on update cascade,
-     trip_id      			integer not null references trip on delete cascade on update cascade,
+    (trip_id      			integer not null references trip on delete cascade on update cascade,
+	 accommodation_id 			integer not null references accommodation on delete cascade on update cascade, 
      primary key (trip_id, accommodation_id)); -- N:M relationship means both keys are needed
