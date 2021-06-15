@@ -10,3 +10,5 @@ drop table if exists trip;
 drop table if exists client;
 drop table if exists employee;
 drop table if exists office;
+
+--cdc
