@@ -133,6 +133,8 @@ insert into activity values(default, 'Eifel Tower', 'bla', 'seightseeing', 'Pari
 insert into activity values(default, 'Chelsea Match', 'bla', 'sport', 'London', 'UK', '2020-01-06');
 insert into activity values(default, 'Bungee Jumping', 'bla', 'sport', 'Milano', 'Italy', '2020-08-06');
 insert into activity values(default, 'Il Colosseo', 'description...', 'culture', 'Roma', 'Italia', '2021-07-25');
+insert into activity values(default, 'Stadio Olimpico', 'football match', 'sport', 'Roma', 'Italia', '2021-07-26');
+insert into activity values(default, 'Città del Vaticano', 'touristic tour', 'culture', 'Roma', 'Italia', '2021-07-27');
 
 
 -- transport
@@ -153,6 +155,10 @@ insert into has_activity values(1, 1);
 insert into has_activity values(1, 2);
 insert into has_activity values(1, 3);
 insert into has_activity values(3, 4);
+insert into has_activity values(4, 5);
+insert into has_activity values(4, 6);
+insert into has_activity values(4, 7);
+
 
 -- has_transport
 insert into has_transport values(4,1);
