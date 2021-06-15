@@ -20,13 +20,13 @@ insert into employee values (default,	'Ute'		,'Gaertner'		,'UteGaertner@cuvox.de
 insert into employee values (default,	'Sandra'	,'Dresner'		,'SandraDresner@einrot.com'		,'041 819 32 93',	14, 3);	
 insert into employee values (default,	'Marie'		,'Seiler'		,'MarieSeiler@armyspy.com'		,'061 399 22 87',	8, 4);	
 insert into employee values (default,	'Isaac'		,'Simard'		,'IsaacSimard@rhyta.com'		,'026 255 88 95',	6, 4);	
-insert into employee values (default,	'Sabine'	,'Douffet'		,'SabineDouffet@einrot.com'		,'056 758 14 34',	22, 4);	
+insert into employee values (default,	'Sabine'	,'Douffet'		,'SabineDouffet@einrot.com'		,'056 758 14 34',	22, 4, false); --fired  	
 insert into employee values (default,	'Honore'	,'Blais'		,'HonoreBlais@einrot.com'		,'026 448 29 48',	11, 4);	
 insert into employee values (default,	'Raison'	,'Chassé'		,'RaisonChasse@gustr.com'		,'081 892 78 82',	5, 4);	
 insert into employee values (default,	'Gaetan'	,'Berthelet'	,'GaetanBerthelet@gustr.com'	,'044 788 92 35',	10, 4);	
 insert into employee values (default,	'Ute'		,'Rothschild'	,'UteRothschild@einrot.com'		,'027 528 55 15',	8, 4);	
 insert into employee values (default,	'Lucas'		,'Nussbaum'		,'LucasNussbaum@teleworm.us'	,'027 702 87 84',	5, 5);	
-insert into employee values (default,	'Doreen'	,'Neumann'		,'DoreenNeumann@einrot.com'		,'091 401 77 77',	25, 5);	
+insert into employee values (default,	'Doreen'	,'Neumann'		,'DoreenNeumann@einrot.com'		,'091 401 77 77',	25, 5, false); --retired	
 insert into employee values (default,	'Eustache'	,'Labosse'		,'EustacheLabosse@rhyta.com'	,'062 568 40 15',	14, 5);	
 insert into employee values (default,	'Martin'	,'Busch'		,'MartinBusch@dayrep.com'		,'021 283 14 57',	23, 5);	
 insert into employee values (default,	'Noël'		,'Bizier'		,'NoelBizier@rhyta.com'			,'091 635 20 67',	14, 5);	
@@ -35,7 +35,7 @@ insert into employee values (default,	'Tim'		,'Schulze'		,'TimSchulze@gustr.com'
 insert into employee values (default,	'Marco'		,'Schwab'		,'MarcoSchwab@fleckens.hu'		,'041 453 87 60',	5, 5);	
 insert into employee values (default,	'Antje'		,'Kaestner'		,'AntjeKaestner@dayrep.com'		,'027 955 19 65',	13, 6);	
 insert into employee values (default,	'Lukas'		,'Vogler'		,'LukasVogler@dayrep.com'		,'071 551 48 43',	10, 6);	
-insert into employee values (default,	'Delphine'	,'Gadbois'		,'DelphineGadbois@fleckens.hu'  ,'026 688 94 55',	20, 6);	
+insert into employee values (default,	'Delphine'	,'Gadbois'		,'DelphineGadbois@fleckens.hu'  ,'026 688 94 55',	20, 6, false);	
 insert into employee values (default,	'Orville'	,'Gadbois'		,'OrvilleGadbois@gustr.com'		,'091 633 90 55',	5, 6);	
 insert into employee values (default,	'Tanja'		,'Brandt'		,'TanjaBrandt@rhyta.com'		,'061 487 44 48',	4, 6);
 
