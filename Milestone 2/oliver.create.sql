@@ -1,25 +1,25 @@
 -- CREATE RELATIONS FOR ENTITIES
 
-create table office 
-    (id             			serial primary key not null,-- auto-incrementing number in PostgreSQL (same id should not be used twice)
-     name           			varchar(30) not null,
-     address        			varchar(60) not null,
-     postcode       			integer not null,
-     city           			varchar(60) not null,
-     email          			varchar(60),                -- email is not essential
-     phone          			varchar(20) not null        -- phone number is essential
+CREATE TABLE office 
+    (id             			SERIAL PRIMARY KEY NOT NULL,-- auto-incrementing number in PostgreSQL (same id should not be used twice)
+     name           			VARCHAR(30) NOT NULL,
+     address        			VARCHAR(60) NOT NULL,
+     postcode       			INTEGER NOT NULL,
+     city           			VARCHAR(60) NOT NULL,
+     email          			VARCHAR(60),                -- email is not essential
+     phone          			VARCHAR(20) NOT NULL        -- phone number is essential
      );
 
- create table employee 
-    (id             			serial primary key not null,
-     surname        			varchar(30) not null,
-     name           			varchar(30) not null,
-     email          			varchar(60),                -- email is not essential
-     phone          			varchar(20) not null,       -- phone number is essential
-     seniority      			integer default 0,          -- length of service in years
-     works_at       			integer,                    -- foreign key, is set to null if corresponding key is deleted -> cannot use not null
-     active                     boolean default true,       -- is employee active, or retired/fired                   
-     foreign key (works_at)		references office(id) on delete set null on update cascade);
+ CREATE TABLE employee 
+    (id             			SERIAL PRIMARY KEY NOT NULL,
+     surname        			VARCHAR(30) NOT NULL,
+     name           			VARCHAR(30) NOT NULL,
+     email          			VARCHAR(60),                -- email is not essential
+     phone          			VARCHAR(20) NOT NULL,       -- phone number is essential
+     seniority      			INTEGER DEFAULT 0,          -- length of service in years
+     works_at       			INTEGER,                    -- foreign key, is set to null if corresponding key is deleted -> cannot use NOT NULL
+     active                     BOOLEAN DEFAULT true,       -- is employee active, or retired/fired                   
+     FOREIGN KEY (works_at)		REFERENCES office(id) ON DELETE SET NULL ON UPDATE CASCADE);
 /*
 If the key (i.e. ID) of an office is updated, we want the corresponding foreign key in employee to be updated as well.
 If an office is closed (i.e. key is deleted), the employees working at this office are not automatically fired.
@@ -27,69 +27,69 @@ They might still be working for the travel agency (maybe in a different office).
 primary key in employee to null.
 */
 
-create table client
-    (id             			serial primary key not null,
-     surname        			varchar(30) not null,
-     name           			varchar(30) not null,
-     address        			varchar(60) not null,
-     postcode       			integer not null,           -- integer works as postcode does not start with 0
-     city           			varchar(60) not null,
-     email          			varchar(60),                -- email is not essential
-     phone          			varchar(20) not null        -- phone number is essential
+CREATE TABLE client
+    (id             			SERIAL PRIMARY KEY NOT NULL,
+     surname        			VARCHAR(30) NOT NULL,
+     name           			VARCHAR(30) NOT NULL,
+     address        			VARCHAR(60) NOT NULL,
+     postcode       			INTEGER NOT NULL,           -- INTEGER works as postcode does not start with 0
+     city           			VARCHAR(60) NOT NULL,
+     email          			VARCHAR(60),                -- email is not essential
+     phone          			VARCHAR(20) NOT NULL        -- phone number is essential
     );
 
-create table trip 
-    (id						    serial primary key not null,
-     name					    varchar(60) not null,
-     start_date					date not null,              -- format: yyyy-mm-dd
-     end_date					date not null,
-     description				varchar(1024),
-     price					    decimal(10,2) default 0.00, -- format: decimal(size, d) with size = digits, d = decimal points
-     bought_by					integer not null,
-     sold_by					integer not null,
-     transaction_date			date not null,              -- date at which trip was bought/sold
-     foreign key (bought_by)	references client(id),      -- we don't want a client to be deleted/updated. So there is no delete/update clause here.
+CREATE TABLE trip 
+    (id						    SERIAL PRIMARY KEY NOT NULL,
+     name					    VARCHAR(60) NOT NULL,
+     start_date					DATE NOT NULL,              -- format: yyyy-mm-dd
+     end_date					DATE NOT NULL,
+     description				VARCHAR(1024),
+     price					    DECIMAL(10,2) DEFAULT 0.00, -- format: decimal(size, d) with size = digits, d = decimal points
+     bought_by					INTEGER NOT NULL,
+     sold_by					INTEGER NOT NULL,
+     transaction_date			DATE NOT NULL,              -- date at which trip was bought/sold
+     FOREIGN KEY (bought_by)	REFERENCES client(id),      -- we don't want a client to be deleted/updated. So there is no delete/update clause here.
                                                             -- so we can have a client history. 
-     foreign key (sold_by)		references employee(id),    -- same argument as for client. We want an employee history. 
-     check (end_date >= start_date)
+     FOREIGN KEY (sold_by)		REFERENCES employee(id),    -- same argument as for client. We want an employee history. 
+     CHECK (end_date >= start_date)
      );
 
-create table payment 
-    (id             			serial primary key not null,
-     amount         			decimal(10,2) not null,
-     date           			date not null,
-     method         			varchar(15),
-     trip_id        			integer not null,
-     foreign key (trip_id)		references trip(id),
-     check (method in ('credit card', 'cash', 'paypal', 'transfer', 'other'))
+CREATE TABLE payment 
+    (id             			SERIAL PRIMARY KEY NOT NULL,
+     amount         			DECIMAL(10,2) NOT NULL,
+     date           			DATE NOT NULL,
+     method         			VARCHAR(15),
+     trip_id        			INTEGER NOT NULL,
+     FOREIGN KEY (trip_id)		REFERENCES trip(id),
+     CHECK (method IN ('credit card', 'cash', 'paypal', 'transfer', 'other'))
      );
 
-create table activity 
-    (id             			serial primary key not null,
-     name           			varchar(30) not null,
-     description    			varchar(1024),
-     type           			varchar(30),
-     city           			varchar(30) not null,
-     country        			varchar(30) not null,
-     check (type in ('food', 'sightseeing', 'sport', 'culture', 'other'))
+CREATE TABLE activity 
+    (id             			SERIAL PRIMARY KEY NOT NULL,
+     name           			VARCHAR(30) NOT NULL,
+     description    			VARCHAR(1024),
+     type           			VARCHAR(30),
+     city           			VARCHAR(30) NOT NULL,
+     country        			VARCHAR(30) NOT NULL,
+     CHECK (type IN ('food', 'sightseeing', 'sport', 'culture', 'other'))
      );
 
-create table transport 
-    (id             			serial primary key not null,
-     start          			varchar(30) not null,
-     destination    			varchar(30) not null,
-     type           			varchar(30),
-     check (type in ('plane', 'train', 'bus', 'other'))
+CREATE TABLE transport 
+    (id             			SERIAL PRIMARY KEY NOT NULL,
+     start          			VARCHAR(30) NOT NULL,
+     destination    			VARCHAR(30) NOT NULL,
+     type           			VARCHAR(30),
+     CHECK (type IN ('plane', 'train', 'bus', 'other'))
      );
 
-create table accommodation 
-    (id             			serial primary key not null,
-     city           			varchar(30) not null,
-     country        			varchar(30) not null,
-     address        			varchar(60) not null,
-     name           			varchar(60) not null,
-     type           			varchar(15),
-     check (type in ('hotel', 'hostel', 'b&b', 'holiday home', 'other'))
+CREATE TABLE accommodation 
+    (id             			SERIAL PRIMARY KEY NOT NULL,
+     city           			VARCHAR(30) NOT NULL,
+     country        			VARCHAR(30) NOT NULL,
+     address        			VARCHAR(60) NOT NULL,
+     name           			VARCHAR(60) NOT NULL,
+     type           			VARCHAR(15),
+     CHECK (type IN ('hotel', 'hostel', 'b&b', 'holiday home', 'other'))
      );
 
 -- CREATE RELATIONS FOR RELATIONSHIPS
@@ -99,31 +99,31 @@ All 1:N relationships in the ER model can be dropped and replaced with a foreign
 in the N-side entity (see foreign keys above). Thus, only the N:M relationships remain.
 */
 
-create table has_activity
-    (trip_id      				integer not null references trip on delete cascade on update cascade,
+CREATE TABLE has_activity
+    (trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
      --If a an activity/trip is deleted, the corresponding tuple in has_activity is obsolete and can be deleted as well.
-     activity_id  				integer not null references activity on update cascade,              
+     activity_id  				INTEGER NOT NULL REFERENCES activity ON UPDATE CASCADE,              
      --since we want an activity history, we do not allow deleting.
-     date           			date not null, 
-     primary key (trip_id, activity_id)     -- N:M relationship means both keys are needed
+     date           			DATE NOT NULL, 
+     PRIMARY KEY (trip_id, activity_id)     -- N:M relationship means both keys are needed
      ); 
 
-create table has_transport
-    (trip_id      				integer not null references trip on delete cascade on update cascade,
+CREATE TABLE has_transport
+    (trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
     --same argument as has_activity see above.
-     transport_id  				integer not null references transport on update cascade,
+     transport_id  				INTEGER NOT NULL REFERENCES transport ON UPDATE CASCADE,
     --same argument as has_activity see above.
-     date           			date not null, 
-     primary key (trip_id, transport_id)                -- N:M relationship means both keys are needed
+     date           			DATE NOT NULL, 
+    PRIMARY KEY (trip_id, transport_id)                -- N:M relationship means both keys are needed
      ); 
 
-Create table has_accommodation
-    (trip_id      				integer not null references trip on delete cascade on update cascade,
+Create TABLE has_accommodation
+    (trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
      --same argument as has_activity see above.
-     accommodation_id 			integer not null references accommodation on update cascade,
+     accommodation_id 			INTEGER NOT NULL REFERENCES accommodation ON UPDATE CASCADE,
      --same argument as has_activity see above.
-     date           			date not null, 
-     duration       			integer,                -- duration of stay (number of nights)
-     primary key (trip_id, accommodation_id),           -- N:M relationship means both keys are needed
-     check (duration > 0)
+     date           			DATE NOT NULL, 
+     duration       			INTEGER,                -- duration of stay (number of nights)
+     PRIMARY KEY (trip_id, accommodation_id),           -- N:M relationship means both keys are needed
+     CHECK (duration > 0)
      );          
