@@ -113,8 +113,8 @@ insert into client values(default,'Capucine','Paulet','Lichtmattstrasse 35',8236
 -- trip
 insert into trip values(default, 'Hartmann London-Paris Jan21', '2021-01-01', '2021-01-07', 'bla', 2500, 1, 1, '2020-10-01');
 insert into trip values(default, 'Dennis Venice Jul21', '2021-07-10', '2021-07-17', 'bla', 1500, 2, 2, '2021-04-10');
-insert into trip values(default, 'Boivin Italy Aug21', '2021-08-01', '2021-08-15', 'bla', 3500, 3, 3, '2021-03-01')
-insert into trip values(default, 'Travel to Rome Jul21', '2021-07-25', '2021-07-31', 'Visit Rome and all famous monuments', 1450, 23,1, '2021-06-14' );
+insert into trip values(default, 'Boivin Italy Aug21', '2021-08-01', '2021-08-15', 'bla', 3500, 3, 3, '2021-03-01');
+insert into trip values(default, 'Travel to Rome Jul21', '2021-07-25', '2021-07-31', 'Visit Rome and all famous monuments', 1450, 23, 1, '2021-06-14' );
 
 -- payment
 insert into payment values(default, 2500, '2020-12-31','paypal' ,1);
