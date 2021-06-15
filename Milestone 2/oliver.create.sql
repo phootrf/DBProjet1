@@ -44,20 +44,20 @@ create table client
     );
 
 create table trip 
-    (id							serial primary key not null,
-     name						varchar(60) not null,
+    (id						serial primary key not null,
+     name					varchar(60) not null,
      start_date					date not null,              -- format: yyyy-mm-dd
      end_date					date not null,
      description				varchar(1024),
-     price						decimal(10,2) default 0.00, -- format: decimal(size, d) with size = digits, d = decimal points
+     price					decimal(10,2) default 0.00, -- format: decimal(size, d) with size = digits, d = decimal points
      bought_by					integer not null,
      sold_by					integer not null,
-     transaction_date			date not null,              -- date at which trip was bought/sold
-     foreign key (bought_by)	references client(id) on delete set null on update cascade, -- same argument as for employee-office (see above)
+     transaction_date				date not null,              -- date at which trip was bought/sold
+     foreign key (bought_by)			references client(id) on delete set null on update cascade, -- same argument as for employee-office (see above)
      -- ich bin nicht sicher, ob hier das gleiche Argument wie oben stimmt. Es könnte sein dass wir ein Archiv haben wollen.
      -- Ein Kunde ist immer ein Kunde. Wenn wir etwas falsch mit einem Kunde gemacht haben, werden wir ein update machen. 
      -- Wenn ein Kunde keine Reise mehr bestellt, heisst das nicht dass wir ihn aus dem Datenbank streichen wollen. 
-     foreign key (sold_by)		references employee(id) on delete set null on update cascade, -- same argument as for employee-office (see above)
+     foreign key (sold_by)			references employee(id) on delete set null on update cascade, -- same argument as for employee-office (see above)
      -- wie oben für Kunde. Vieleicht sollten wir entscheiden ob ein Mitarbeiter aktiv ist oder nicht. Wenn nicht mehr aktiv, kann er nicht mehr verkaufen
      -- wir haben aber ein Archiv der Reisen, die er organisiert hat. 
      check (end_date >= start_date)
@@ -84,7 +84,7 @@ create table activity
      city           			varchar(30) not null,
      country        			varchar(30) not null,
      date           			date not null, 
-     check (type in ('food', 'seightseeing', 'sport', 'culture', 'other'))
+     check (type in ('food', 'sightseeing', 'sport', 'culture', 'other')) --"seightseeing" --> "sightseeing"
      );
 
 create table transport 
@@ -118,7 +118,7 @@ in the N-side entity (see foreign keys above). Thus, only the N:M relationships 
 
 create table has_activity
     (trip_id      				integer not null references trip on delete cascade on update cascade,
-	 activity_id  				integer not null references activity on delete cascade on update cascade,
+     activity_id  				integer not null references activity on delete cascade on update cascade,
      primary key (trip_id, activity_id)); -- N:M relationship means both keys are needed
 /*
 If the key of an activity/trip is updated (i.e. ID is changed), the corresponding foreign keys in
@@ -131,10 +131,10 @@ The same argument holds for has_transport and has_accommodation (see below).
 
 create table has_transport
     (trip_id      				integer not null references trip on delete cascade on update cascade,
-	 transport_id  				integer not null references transport on delete cascade on update cascade,
+     transport_id  				integer not null references transport on delete cascade on update cascade,
      primary key (trip_id, transport_id)); -- N:M relationship means both keys are needed
 
 Create table has_accommodation
     (trip_id      				integer not null references trip on delete cascade on update cascade,
-	 accommodation_id 			integer not null references accommodation on delete cascade on update cascade,
-	 primary key (trip_id, accommodation_id)); -- N:M relationship means both keys are needed
+     accommodation_id 				integer not null references accommodation on delete cascade on update cascade,
+     primary key (trip_id, accommodation_id)); -- N:M relationship means both keys are needed
