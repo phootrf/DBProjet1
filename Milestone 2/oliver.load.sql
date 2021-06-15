@@ -128,45 +128,40 @@ insert into payment values(default, 450, '2021-06-30','transfer' ,4);
 insert into payment values(default, 1000, '2021-07-15','transfer' ,4);
 
 -- activity
-insert into activity values(default, 'Louvre', 'bla', 'culture', 'Paris', 'France', '2020-01-02');
-insert into activity values(default, 'Eifel Tower', 'bla', 'seightseeing', 'Paris', 'France', '2020-01-03');
-insert into activity values(default, 'Chelsea Match', 'bla', 'sport', 'London', 'UK', '2020-01-06');
-insert into activity values(default, 'Bungee Jumping', 'bla', 'sport', 'Milano', 'Italy', '2020-08-06');
-insert into activity values(default, 'Il Colosseo', 'description...', 'culture', 'Roma', 'Italia', '2021-07-25');
-insert into activity values(default, 'Stadio Olimpico', 'football match', 'sport', 'Roma', 'Italia', '2021-07-26');
-insert into activity values(default, 'Città del Vaticano', 'touristic tour', 'culture', 'Roma', 'Italia', '2021-07-27');
+insert into activity values(default, 'Louvre', 'bla', 'culture', 'Paris', 'France' );
+insert into activity values(default, 'Eifel Tower', 'bla', 'seightseeing', 'Paris', 'France');
+insert into activity values(default, 'Chelsea Match', 'bla', 'sport', 'London', 'UK');
+insert into activity values(default, 'Bungee Jumping', 'bla', 'sport', 'Milano', 'Italy' );
+insert into activity values(default, 'Il Colosseo', 'description...', 'culture', 'Roma', 'Italia' );
+insert into activity values(default, 'Stadio Olimpico', 'football match', 'sport', 'Roma', 'Italia' );
+insert into activity values(default, 'Città del Vaticano', 'touristic tour', 'culture', 'Roma', 'Italia');
 
+-- has_activity (trip_id, activity_id, date)
+insert into has_activity values(1, 1, '2020-01-02');
+insert into has_activity values(1, 2, '2020-01-03');
+insert into has_activity values(1, 3, '2020-01-06');
+insert into has_activity values(3, 4, '2020-08-06');
+insert into has_activity values(4, 5, '2021-07-25');
+insert into has_activity values(4, 6, '2021-07-26');
+insert into has_activity values(4, 7, '2021-07-27');
 
--- transport
-insert into transport values(default, 'Bern', 'Roma Termini', 'train', '2021-07-25');
-insert into transport values(default, 'Roma Termini', 'Bern', 'train', '2021-07-31');
-insert into transport values(default, 'Zürich', 'Venezia Sta Lucia', 'train', '2021-07-10');
-insert into transport values(default, 'Venezia Sta Lucia', 'Zürich', 'train', '2021-07-17');
+-- transport 
+insert into transport values(default, 'Bern', 'Roma Termini', 'train');
+insert into transport values(default, 'Roma Termini', 'Bern', 'train');
+insert into transport values(default, 'Zürich', 'Venezia Sta Lucia', 'train');
+insert into transport values(default, 'Venezia Sta Lucia', 'Zürich', 'train');
 
+-- has_transport (trip_id, transport_id, date)
+insert into has_transport values(4, 1, '2021-07-25');
+insert into has_transport values(4, 2, '2021-07-31');
+insert into has_transport values(2, 3, '2021-07-10');
+insert into has_transport values(2, 4, '2021-07-17');
 
+-- accommodation (ID, city, country, address, name, type)
+insert into accommodation values(default, 'Roma', 'Italia', 'Piazza del Popolo', 'Il Grande Hotel', 'hotel');
+insert into accommodation values(default, 'Venezia', 'Italia', 'Via Ortigara 10', 'Anda Venice Hostel', 'hostel');
 
--- accommodation
-insert into accommodation values(default, 'Roma', 'Italia', 'Piazza del Popolo', 'Il Grande Hotel', '2021-07-25', 6, 'hotel' );
-insert into accommodation values(default, 'Venezia', 'Italia', 'Via Ortigara 10', 'Anda Venice Hostel', '2021-07-10', 7, 'hostel' );
-
-
--- has_activity (trip_id, activity_id)
-insert into has_activity values(1, 1);
-insert into has_activity values(1, 2);
-insert into has_activity values(1, 3);
-insert into has_activity values(3, 4);
-insert into has_activity values(4, 5);
-insert into has_activity values(4, 6);
-insert into has_activity values(4, 7);
-
-
--- has_transport
-insert into has_transport values(4,1);
-insert into has_transport values(4,2);
-insert into has_transport values(2,3);
-insert into has_transport values(2,4);
-
--- has_accommodation
-insert into has_accommodation values(4, 1);
-insert into has_accommodation values(2, 2);
+-- has_accommodation(trip_id, accommodation_id, date, duration)
+insert into has_accommodation values(4, 1, '2021-07-25', 6);
+insert into has_accommodation values(2, 2, '2021-07-10', 7);
 

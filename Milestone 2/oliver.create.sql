@@ -101,29 +101,27 @@ in the N-side entity (see foreign keys above). Thus, only the N:M relationships 
 
 create table has_activity
     (trip_id      				integer not null references trip on delete cascade on update cascade,
-     activity_id  				integer not null references activity on delete cascade on update cascade,
+     --If a an activity/trip is deleted, the corresponding tuple in has_activity is obsolete and can be deleted as well.
+     activity_id  				integer not null references activity on update cascade,              
+     --since we want an activity history, we do not allow deleting.
      date           			date not null, 
      primary key (trip_id, activity_id)     -- N:M relationship means both keys are needed
      ); 
-/*
-If the key of an activity/trip is updated (i.e. ID is changed), the corresponding foreign keys in
-has_activity must be updated as well.
-If a an activity/trip is deleted, the corresponding tuple in has_activity is obsolete and can be deleted as well.
-This is due to the fact that each tuple in has_activity links an activity to a specific trip, meaning that each
-activity is trip-secific (i.e. Louvre for trip A is not the same activity as Louvre for trip B).		
-The same argument holds for has_transport and has_accommodation (see below).
-*/
 
 create table has_transport
     (trip_id      				integer not null references trip on delete cascade on update cascade,
-     transport_id  				integer not null references transport on delete cascade on update cascade,
+    --same argument as has_activity see above.
+     transport_id  				integer not null references transport on update cascade,
+    --same argument as has_activity see above.
      date           			date not null, 
      primary key (trip_id, transport_id)                -- N:M relationship means both keys are needed
      ); 
 
 Create table has_accommodation
     (trip_id      				integer not null references trip on delete cascade on update cascade,
-     accommodation_id 			integer not null references accommodation on delete cascade on update cascade,
+     --same argument as has_activity see above.
+     accommodation_id 			integer not null references accommodation on update cascade,
+     --same argument as has_activity see above.
      date           			date not null, 
      duration       			integer,                -- duration of stay (number of nights)
      primary key (trip_id, accommodation_id),           -- N:M relationship means both keys are needed
