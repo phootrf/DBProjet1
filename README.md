@@ -1,6 +1,5 @@
 # Projekt für Datenbanken Module (GYMINF)
 
-* ER-Diagram made with : https://app.diagrams.net
-* Description folder : project in LaTeX format. 
+* web page for the project : https://pernetch.github.io/DBProjet1/ 
 
 
