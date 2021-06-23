@@ -24,7 +24,7 @@ CREATE TABLE office
 If the key (i.e. ID) of an office is updated, we want the corresponding foreign key in employee to be updated as well.
 If an office is closed (i.e. key is deleted), the employees working at this office are not automatically fired.
 They might still be working for the travel agency (maybe in a different office). Hence, we set the corresponding 
-primary key in employee to null.
+foreign key in employee to null.
 */
 
 CREATE TABLE client
@@ -48,8 +48,8 @@ CREATE TABLE trip
      bought_by					INTEGER NOT NULL,
      sold_by					INTEGER NOT NULL,
      transaction_date			DATE NOT NULL,              -- date at which trip was bought/sold
-     FOREIGN KEY (bought_by)	REFERENCES client(id),      -- we don't want a client to be deleted/updated. So there is no delete/update clause here.
-                                                            -- so we can have a client history. 
+     FOREIGN KEY (bought_by)	REFERENCES client(id),      -- to have a client history, we don't want a client to be deleted/updated
+	 														-- so there is no delete/update clause here
      FOREIGN KEY (sold_by)		REFERENCES employee(id),    -- same argument as for client. We want an employee history. 
      CHECK (end_date >= start_date)
      );
@@ -101,18 +101,18 @@ in the N-side entity (see foreign keys above). Thus, only the N:M relationships 
 
 CREATE TABLE has_activity
     (trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
-     --If a an activity/trip is deleted, the corresponding tuple in has_activity is obsolete and can be deleted as well.
+     -- if a trip is deleted, the corresponding tuple in has_activity is obsolete and can be deleted as well
      activity_id  				INTEGER NOT NULL REFERENCES activity ON UPDATE CASCADE,              
-     --since we want an activity history, we do not allow deleting.
+     -- since we want an activity history, we do not allow deleting
      date           			DATE NOT NULL, 
      PRIMARY KEY (trip_id, activity_id)     -- N:M relationship means both keys are needed
      ); 
 
 CREATE TABLE has_transport
     (trip_id      				INTEGER NOT NULL REFERENCES trip ON DELETE CASCADE ON UPDATE CASCADE,
-    --same argument as has_activity see above.
+    -- same argument as has_activity, see above
      transport_id  				INTEGER NOT NULL REFERENCES transport ON UPDATE CASCADE,
-    --same argument as has_activity see above.
+    -- same argument as has_activity, see above
      date           			DATE NOT NULL, 
     PRIMARY KEY (trip_id, transport_id)                -- N:M relationship means both keys are needed
      ); 

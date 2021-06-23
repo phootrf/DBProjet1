@@ -1,4 +1,4 @@
--- office
+-- office (id, name, address, postcode, city, email, phone)
 INSERT INTO office VALUES(DEFAULT, 'Travel Agency Geneva', 'Rte du lac 1', 1211, 'Genève', 'geneva@travelagency.ch', '032 327 90 34');
 INSERT INTO office VALUES(DEFAULT, 'Travel Agency Bern', 'Neuengasse 1', 3001, 'Bern', 'bern@travelagency.ch', '052 396 77 60');
 INSERT INTO office VALUES(DEFAULT, 'Travel Agency Zürich', 'Färbergasse 1', 8001, 'Zürich', 'zurich@travelagency.ch', '032 444 40 22');
@@ -6,7 +6,8 @@ INSERT INTO office VALUES(DEFAULT, 'Travel Agency Basel', 'Falknerstrasse 41', 4
 INSERT INTO office VALUES(DEFAULT, 'Travel Agency Luzern', 'Frohburgstrasse 1', 6002, 'Luzern', 'luzern@travelagency.ch', '091 401 77 77');
 INSERT INTO office VALUES(DEFAULT, 'Travel Agency Lugano', 'Via San Gottardo 1', 6900, 'Lugano', 'lugano@travelagency.ch', '026 688 94 55');
 
--- employee (generated with https://fr.fakenamegenerator.com/order.php)
+-- employee (id, surname, name, email, phone, seniority, works_at, active)
+-- generated with https://fr.fakenamegenerator.com/order.php
 INSERT INTO employee VALUES (DEFAULT,	'Karolin'	,'Herrmann'		,'KarolinHerrmann@armyspy.com'	,'032 327 90 34',	24, 1);	
 INSERT INTO employee VALUES (DEFAULT,	'Gaetane'	,'Coudert'		,'GaetaneCoudert@einrot.com'  	,'091 828 11 18',	13, 1);
 INSERT INTO employee VALUES (DEFAULT,	'Roux'		,'Perreault'	,'RouxPerreault@gustr.com'	  	,'052 396 77 60',	1, 2);	
@@ -39,7 +40,8 @@ INSERT INTO employee VALUES (DEFAULT,	'Delphine'	,'Gadbois'		,'DelphineGadbois@f
 INSERT INTO employee VALUES (DEFAULT,	'Orville'	,'Gadbois'		,'OrvilleGadbois@gustr.com'		,'091 633 90 55',	5, 6);	
 INSERT INTO employee VALUES (DEFAULT,	'Tanja'		,'Brandt'		,'TanjaBrandt@rhyta.com'		,'061 487 44 48',	4, 6);
 
--- client (generated with https://fr.fakenamegenerator.com/order.php)
+-- client (id, surname, name, address, postcode, city, email, phone)
+-- generated with https://fr.fakenamegenerator.com/order.php
 INSERT INTO client VALUES(DEFAULT,'Karin','Hartmann','Landstrasse 133',8207,'Schaffhausen','KarinHartmann@gustr.com','044 286 68 44');
 INSERT INTO client VALUES(DEFAULT,'Claude','Dennis','Herrenberg 131',1663,'Pringy','ClaudeDennis@fleckens.hu','026 297 20 94');
 INSERT INTO client VALUES(DEFAULT,'Noël','Boivin','Caltgadira 79',6883,'Novazzano','NoelBoivin@teleworm.us','091 221 63 20');
@@ -110,10 +112,10 @@ INSERT INTO client VALUES(DEFAULT,'Luce','Savard','Kappelergasse 9',7180,'Aclett
 INSERT INTO client VALUES(DEFAULT,'Marco','König','Kammelenbergstrasse 108',7018,'Flims Waldhaus','MarcoKonig@armyspy.com','081 227 80 50');
 INSERT INTO client VALUES(DEFAULT,'Capucine','Paulet','Lichtmattstrasse 35',8236,'Büttenhardt','CapucinePaulet@cuvox.de','044 260 97 53');
 
--- trip
-INSERT INTO trip VALUES(DEFAULT, 'Hartmann London-Paris Jan21', '2021-01-01', '2021-01-07', 'bla', 2500, 1, 1, '2020-10-01');
-INSERT INTO trip VALUES(DEFAULT, 'Dennis Venice Jul21', '2021-07-10', '2021-07-17', 'bla', 1500, 2, 2, '2021-04-10');
-INSERT INTO trip VALUES(DEFAULT, 'Boivin Italy Aug21', '2021-08-01', '2021-08-15', 'bla', 3500, 3, 3, '2021-03-01');
+-- trip (id, name, start_date, end_date, description, price, bought_by, sold_by, transaction_date)
+INSERT INTO trip VALUES(DEFAULT, 'Hartmann London-Paris Jan21', '2021-01-01', '2021-01-07', 'A week in London and Paris for Hartmann family', 2500, 1, 1, '2020-10-01');
+INSERT INTO trip VALUES(DEFAULT, 'Dennis Venice Jul21', '2021-07-10', '2021-07-17', 'Venice and its attractions', 1500, 2, 2, '2021-04-10');
+INSERT INTO trip VALUES(DEFAULT, 'Boivin Italy Aug21', '2021-08-01', '2021-08-15', 'Two week adventure in Italy', 3500, 3, 3, '2021-03-01');
 INSERT INTO trip VALUES(DEFAULT, 'Travel to Rome Jul21', '2021-07-25', '2021-07-31', 'Visit Rome and all famous monuments', 1450, 23, 1, '2021-06-14' );
 INSERT INTO trip VALUES(DEFAULT, 'City Trip Fribourg', '2021-07-03', '2021-07-7', 'A City Trip for Ms. Karin Hartmann', 856.85, 1, 1, '2021-06-14');
 INSERT INTO trip VALUES(DEFAULT, 'Canada with Rockies', '2021-07-01', '2021-07-30', 'Canada West Coast Trip including Camper Rental for Mr. Brigliador Despins', 11556.00, 4, 7, '2021-06-01');
@@ -121,20 +123,16 @@ INSERT INTO trip VALUES(DEFAULT, 'City Trip Singapore via Dubai', '2021-07-03', 
 INSERT INTO trip VALUES(DEFAULT, 'Day Trip Luzern', '2021-09-09', '2021-09-9', 'A day City Trip for Mr. Thimotée Landry', 160.50, 5, 1, '2021-05-02');
 INSERT INTO trip VALUES(DEFAULT, 'Three Weeks of Japan with Japan Rail Pass', '2021-09-04', '2021-09-26', 'Japan Trip including a Green Car Japan Rail Pass for Ms. Yvonne Reiniger', 6654.00, 15, 5, '2020-03-10');
 
-
--- payment
+-- payment (id, amount, date, method, trip_id)
 INSERT INTO payment VALUES(DEFAULT, 2500, '2020-12-31','paypal' ,1);
-
 INSERT INTO payment VALUES(DEFAULT, 1000, '2021-04-30','transfer' ,2);
-
 INSERT INTO payment VALUES(DEFAULT, 500, '2021-03-30','cash' ,3);
 INSERT INTO payment VALUES(DEFAULT, 3000, '2021-06-30','transfer' ,3);
-
 INSERT INTO payment VALUES(DEFAULT, 450, '2021-06-30','transfer' ,4);
 INSERT INTO payment VALUES(DEFAULT, 1000, '2021-07-15','transfer' ,4);
 
--- activity
-INSERT INTO activity VALUES(DEFAULT, 'Louvre', 'bla', 'culture', 'Paris', 'France' );
+-- activity (id, name, description, type, city, country)
+INSERT INTO activity VALUES(DEFAULT, 'Louvre', 'Louvre Museum Paris', 'culture', 'Paris', 'France' );
 INSERT INTO activity VALUES(DEFAULT, 'Eifel Tower', 'bla', 'sightseeing', 'Paris', 'France');
 INSERT INTO activity VALUES(DEFAULT, 'Chelsea Match', 'bla', 'sport', 'London', 'UK');
 INSERT INTO activity VALUES(DEFAULT, 'Bungee Jumping', 'bla', 'sport', 'Milano', 'Italy' );
@@ -151,7 +149,7 @@ INSERT INTO has_activity VALUES(4, 5, '2021-07-25');
 INSERT INTO has_activity VALUES(4, 6, '2021-07-26');
 INSERT INTO has_activity VALUES(4, 7, '2021-07-27');
 
--- transport 
+-- transport (id, start, destination, type)
 INSERT INTO transport VALUES(DEFAULT, 'Bern', 'Roma Termini', 'train');
 INSERT INTO transport VALUES(DEFAULT, 'Roma Termini', 'Bern', 'train');
 INSERT INTO transport VALUES(DEFAULT, 'Zürich', 'Venezia Sta Lucia', 'train');
@@ -166,8 +164,11 @@ INSERT INTO has_transport VALUES(2, 4, '2021-07-17');
 -- accommodation (ID, city, country, address, name, type)
 INSERT INTO accommodation VALUES(DEFAULT, 'Roma', 'Italia', 'Piazza del Popolo', 'Il Grande Hotel', 'hotel');
 INSERT INTO accommodation VALUES(DEFAULT, 'Venezia', 'Italia', 'Via Ortigara 10', 'Anda Venice Hostel', 'hostel');
+INSERT INTO accommodation VALUES(DEFAULT, 'Paris', 'France', '108 Rue Saint-Lazare', 'Hilton Paris Opera', 'hotel');
+INSERT INTO accommodation VALUES(DEFAULT, 'London', 'UK', '8-14 Coopers Row', 'Leonardo Royal London City', 'hotel');
 
 -- has_accommodation(trip_id, accommodation_id, date, duration)
 INSERT INTO has_accommodation VALUES(4, 1, '2021-07-25', 6);
 INSERT INTO has_accommodation VALUES(2, 2, '2021-07-10', 7);
-
+INSERT INTO has_accommodation VALUES(1, 3, '2021-01-01', 3);
+INSERT INTO has_accommodation VALUES(1, 4, '2021-01-04', 4);
