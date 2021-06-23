@@ -133,10 +133,10 @@ INSERT INTO payment VALUES(DEFAULT, 1000, '2021-07-15','transfer' ,4);
 
 -- activity (id, name, description, type, city, country)
 INSERT INTO activity VALUES(DEFAULT, 'Louvre', 'Louvre Museum Paris', 'culture', 'Paris', 'France' );
-INSERT INTO activity VALUES(DEFAULT, 'Eifel Tower', 'bla', 'sightseeing', 'Paris', 'France');
-INSERT INTO activity VALUES(DEFAULT, 'Chelsea Match', 'bla', 'sport', 'London', 'UK');
-INSERT INTO activity VALUES(DEFAULT, 'Bungee Jumping', 'bla', 'sport', 'Milano', 'Italy' );
-INSERT INTO activity VALUES(DEFAULT, 'Il Colosseo', 'description...', 'culture', 'Roma', 'Italia' );
+INSERT INTO activity VALUES(DEFAULT, 'Eifel Tower', 'Eifel Tower Paris', 'sightseeing', 'Paris', 'France');
+INSERT INTO activity VALUES(DEFAULT, 'Chelsea football match', 'Premier League at Stamford Bridge', 'sport', 'London', 'UK');
+INSERT INTO activity VALUES(DEFAULT, 'Bungee Jumping Milano', 'Bungee Jumping in the city center of Milano', 'sport', 'Milano', 'Italy' );
+INSERT INTO activity VALUES(DEFAULT, 'Il Colosseo', 'Roman Colosseum Rome', 'culture', 'Roma', 'Italia' );
 INSERT INTO activity VALUES(DEFAULT, 'Stadio Olimpico', 'football match', 'sport', 'Roma', 'Italia' );
 INSERT INTO activity VALUES(DEFAULT, 'Città del Vaticano', 'touristic tour', 'culture', 'Roma', 'Italia');
 
