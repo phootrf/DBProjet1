@@ -11,15 +11,15 @@
 	\maketitle
 	
 	\section*{Adjustment of ER-Diagram}
-	Based on the feedback that we received for Milestone 1 and our discussions related to Milestone 2, we decided to slightly adjust our ER-Diagram:
+	Based on the feedback  we received for Milestone 1 and our discussions related to Milestone 2, we decided to slightly adjust our ER-Diagram:
 	\begin{itemize}
-		\item The entity Payment is no longer modeled as a weak entity. Further, we allow installment payments (i.e. a client can pay for his individualized trip with several payments), which leads to a 1:N relationship.
+		\item The entity Payment is no longer modeled as a weak entity. Further, we allow installment payments (e.g. clients can pay for their individualized trips with several payments), which leads to a 1:N relationship.
 		This also implies that the amount of the payment can be different from the price of the trip.
 		\item We added the attributes City and Country to the entity Activity. This allows us to know where an activity takes place.
 		For simplicity, we decided to drop the attribute Contact from the entity Activity. The phone number of the activity provider is not essential in our simplified model.
-		\item We moved the attributes Date and Number of Nights from the entities Activity, Transport and Accommodation to the corresponding relationships has\_activity, has\_transport and has\_accommodation.
-		The reason for this is that Date and Number of Nights are the only things that might change, while all other attributes of these three entities cannot change between different trips (i.e. the address of a hotel is fixed).
-		This allows us to load data more efficiently into our database (i.e. when we add an activity to a trip, we only have to specify the date when the activity takes place, but not the name or description of the activity).
+		\item We moved the attributes Date and Number of Nights from the entities Activity, Transport and Accommodation to the relationships has\_activity, has\_transport and has\_accommodation, respectively.
+		We opted for this adjustment, because Date and Number of Nights are the only things that might change, while all other attributes of these three entities cannot change between different trips (e.g. the address of a hotel always stays the same).
+		This allows us to load data more efficiently into our database (e.g. when we add an activity to a trip, we only have to specify the date when the activity takes place, but not the name or description of the activity).
 	\end{itemize}
 	
 You find our adjusted ER-Diagram on the next page.
