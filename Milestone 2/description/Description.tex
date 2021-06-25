@@ -19,7 +19,9 @@
 		For simplicity, we decided to drop the attribute Contact from the entity Activity. The phone number of the activity provider is not essential in our simplified model.
 		\item We moved the attributes Date and Number of Nights from the entities Activity, Transport and Accommodation to the relationships has\_activity, has\_transport and has\_accommodation, respectively.
 		We opted for this adjustment, because Date and Number of Nights are the only things that might change, while all other attributes of these three entities cannot change between different trips (e.g. the address of a hotel always stays the same).
-		This allows us to load data more efficiently into our database (e.g. when we add a hotel to a trip, we only have to specify the start date and the number of nights of the stay, but not the name or address of the hotel).
+		This allows us to load data more efficiently into our database.
+		Example: When we add a hotel to a trip, we only have to specify the trip and hotel ID, the start date and the number of nights of the stay in the relation has\_accommodation.
+		But we don't have to specify the name or address of the hotel for each new trip which uses this hotel.
 	\end{itemize}
 	
 You find our adjusted ER-Diagram on the next page.
